@@ -46,9 +46,35 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
+//myip's
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
 function Presentation() {
   return (
     <>
+      <Container maxWidth="sm" justifyContent="center">
+        <MKTypography
+          variant="h1"
+          align="center"
+          gutterBottom
+          color="red"
+          px={{ xs: 6, lg: 12 }}
+          m={3}
+        >
+          <div>GUMROAD</div>
+        </MKTypography>
+      </Container>
+
       <DefaultNavbar
         routes={routes}
         action={{
@@ -70,34 +96,16 @@ function Presentation() {
           placeItems: "center",
         }}
       >
-        <Container>
-          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
-            <MKTypography
-              variant="h1"
-              color="white"
-              mt={-6}
-              mb={1}
-              sx={({ breakpoints, typography: { size } }) => ({
-                [breakpoints.down("md")]: {
-                  fontSize: size["3xl"],
-                },
-              })}
-            >
-              Material Kit 2 React{" "}
-            </MKTypography>
-            <MKTypography
-              variant="body1"
-              color="white"
-              textAlign="center"
-              px={{ xs: 6, lg: 12 }}
-              mt={1}
-            >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
-            </MKTypography>
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <Item>Section 1</Item>
           </Grid>
-        </Container>
+          <Grid item xs={6}>
+            <Item>Section 2</Item>
+          </Grid>
+        </Grid>
       </MKBox>
+
       <Card
         sx={{
           p: 2,
@@ -162,15 +170,16 @@ function Presentation() {
         </Container>
         <Testimonials />
         <Download />
-        <MKBox pt={18} pb={6}>
+
+        <MKBox pt={6} pb={6}>
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
-                <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
-                  Thank you for your support!
+                <MKTypography variant="h1" fontWeight="bold" mb={0.5}>
+                  18.Thank you for your time and attention!
                 </MKTypography>
                 <MKTypography variant="body1" color="text">
-                  We deliver the best web products
+                  My Short intro : best of the best work is the only work you can Expect.
                 </MKTypography>
               </Grid>
               <Grid
@@ -183,32 +192,32 @@ function Presentation() {
               >
                 <MKSocialButton
                   component="a"
-                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23mui5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-react"
+                  href="https://twitter.com/AmazingSummitS"
                   target="_blank"
                   color="twitter"
                   sx={{ mr: 1 }}
                 >
                   <i className="fab fa-twitter" />
-                  &nbsp;Tweet
+                  &nbsp; Connect with me here
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://github.com/thesumitsuryawanshi?tab=repositories"
                   target="_blank"
-                  color="facebook"
+                  color="github"
                   sx={{ mr: 1 }}
                 >
-                  <i className="fab fa-facebook" />
-                  &nbsp;Share
+                  <i className="fab fa-github" />
+                  &nbsp;GitHub Profile
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.linkedin.com/in/thesumitsuryawanshi/"
                   target="_blank"
-                  color="pinterest"
+                  color="Linkedin"
                 >
-                  <i className="fab fa-pinterest" />
-                  &nbsp;Pin it
+                  <i className="fa fa-linkedin" />
+                  &nbsp; Linkedin
                 </MKSocialButton>
               </Grid>
             </Grid>

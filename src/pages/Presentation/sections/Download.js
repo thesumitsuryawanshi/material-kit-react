@@ -16,143 +16,164 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Tooltip from "@mui/material/Tooltip";
+// import Tooltip from "@mui/material/Tooltip";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-import MKButton from "components/MKButton";
+// import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Images
-import bgImage from "assets/images/shapes/waves-white.svg";
+// import bgImage from "assets/images/shapes/waves-white.svg";
+
+//myip
+import { styled } from "@mui/system";
+
+// mycomponents
+const ButtonContainer = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100%",
+  textAlign: "center",
+});
+const MyBtnStartSelling = styled("div")({
+  color: "white",
+  backgroundColor: "black",
+  borderRadius: 4,
+  transition: "all 0.3s ease 0s",
+  cursor: "pointer",
+  outline: "none",
+  border: "2px solid #000" /* Thin black border */,
+  alignItems: "center",
+  textAlign: "center",
+  justifyContent: "center",
+  "&:hover": {
+    transform: "translateY(-9px) translateX(-9px)",
+  },
+});
+const BoxRed = styled("div")({
+  color: "white",
+  backgroundColor: "#f21326",
+  borderRadius: 4,
+  transition: "all 0.3s ease 0s",
+  cursor: "pointer",
+  outline: "none",
+  border: "2px solid #000" /* Thin black border */,
+  alignItems: "center",
+  textAlign: "center",
+  justifyContent: "center",
+  "&:hover": {
+    transform: "translateY(-9px) translateX(-9px)",
+  },
+});
+
+const BoxYellow = styled("div")({
+  color: "white",
+  backgroundColor: "#e8fc03",
+  borderRadius: 4,
+  transition: "all 0.3s ease 0s",
+  cursor: "pointer",
+  outline: "none",
+  border: "2px solid #000" /* Thin black border */,
+  alignItems: "center",
+  textAlign: "center",
+  justifyContent: "center",
+  "&:hover": {
+    transform: "translateY(9px) translateX(9px)",
+  },
+});
+
+const ContainerWrapper = styled(Container)({
+  position: "relative",
+  justifyContent: "center",
+  zIndex: 2,
+  py: 12,
+});
+
+const GridItemWrapper = styled(Grid)({
+  container: true,
+  item: true,
+  xs: 12,
+  md: 7,
+  justifyContent: "center",
+  mx: "auto",
+  textAlign: "center",
+});
 
 function Download() {
+  const handleStartSellingClick = () => {
+    // Open Gumroad website in a new tab when the button is clicked
+    window.open("https://app.gumroad.com/signup", "_blank");
+  };
   return (
     <MKBox component="section" py={{ xs: 0, sm: 12 }}>
       <MKBox
         variant="gradient"
-        bgColor="dark"
         position="relative"
         borderRadius="xl"
-        sx={{ overflow: "hidden" }}
+        sx={{ overflow: "hidden", bgcolor: "#fc72e0", p: 1 }}
       >
         <MKBox
-          component="img"
-          src={bgImage}
-          alt="pattern-lines"
+          // component="img"
+          // src={bgImage}
+          // alt="pattern-lines"
           position="absolute"
           top={0}
           left={0}
           width="100%"
           zIndex={1}
-          opacity={0.2}
+          opacity={0.6}
         />
-        <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
-          <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
-            <MKTypography variant="h3" color="white">
-              Do you love this awesome
-            </MKTypography>
-            <MKTypography variant="h3" color="white" mb={1}>
-              UI Kit for ReactJS &amp; MUI?
-            </MKTypography>
-            <MKTypography variant="body2" color="white" mb={6}>
-              Cause if you do, it can be yours for FREE. Hit the button below to navigate to
-              Creative Tim where you can find the Design System in HTML. Start a new project or give
-              an old Bootstrap project a new look!
-            </MKTypography>
-            <MKButton
-              variant="gradient"
-              color="info"
-              size="large"
-              component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
-              sx={{ mb: 2 }}
+        <ContainerWrapper>
+          <MKTypography variant="h1" color="white"></MKTypography>
+
+          <GridItemWrapper>
+            <MKTypography
+              variant="h1"
+              color="white"
+              sx={{ m: 10, fontFamily: "sansserif" }} // Specify the font family
             >
-              Download Now
-            </MKButton>
-          </Grid>
-        </Container>
+              17. Share your work. <br /> Someone out there needs it.
+            </MKTypography>
+
+            <ButtonContainer sx={{ m: 10 }}>
+              <BoxYellow>
+                <BoxRed>
+                  <MyBtnStartSelling
+                    onClick={handleStartSellingClick} // Add onClick event
+                    sx={{ px: 9, py: 1.5 }}
+                  >
+                    {" "}
+                    Start Selling
+                  </MyBtnStartSelling>{" "}
+                </BoxRed>
+              </BoxYellow>
+            </ButtonContainer>
+          </GridItemWrapper>
+        </ContainerWrapper>
       </MKBox>
-      <Container>
+      {/* <Container variant="gradient" sx={{ overflow: "hidden", bgcolor: "#3d55f2", p: 2 }}>
         <Grid container item xs={6} mx="auto">
           <MKBox textAlign="center">
-            <MKTypography variant="h3" mt={6} mb={3}>
-              Available on these technologies
+            <MKTypography variant="h1" mt={6} mb={3}>
+              Build in
             </MKTypography>
-            <Grid container spacing={3} justifyContent="center">
+            <Grid container spacing={1} justifyContent="center">
               <Grid item xs={4} lg={2}>
-                <Tooltip title="Bootstrap 5 - Most popular front-end component library">
-                  <MKBox
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-kit"
-                    target="_blank"
-                  >
+                <Tooltip title="Figma">
+                  <MKBox component="a" href="https://www.figma.com" target="_blank">
                     <MKBox
                       component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/bootstrap5.jpg"
+                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/figma.jpg"
                       width="100%"
                     />
                   </MKBox>
                 </Tooltip>
               </Grid>
               <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/icon-tailwind.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-kit-react"
-                    target="_blank"
-                  >
+                <Tooltip title="React">
+                  <MKBox component="a" href="https://react.dev/" target="_blank">
                     <MKBox
                       component="img"
                       src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
@@ -162,14 +183,8 @@ function Download() {
                 </Tooltip>
               </Grid>
               <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
+                <Tooltip title="Ruby on Rails">
+                  <MKBox component="a" href="#" target="_blank">
                     <MKBox
                       component="img"
                       src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
@@ -181,7 +196,7 @@ function Download() {
             </Grid>
           </MKBox>
         </Grid>
-      </Container>
+      </Container> */}
     </MKBox>
   );
 }

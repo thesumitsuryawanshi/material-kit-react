@@ -42,7 +42,7 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    5. Feel the
                     <br />
                     Material Kit
                   </>

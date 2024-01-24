@@ -49,7 +49,7 @@ function Counters() {
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={4}
+              count={14}
               title="Pages"
               description="Save 3-4 weeks of work when you use our pre-made pages for your website"
             />
