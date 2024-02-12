@@ -37,13 +37,13 @@ import MKButton from "components/MKButton";
 
 // Material Kit 2 React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import SimpleFooter from "examples/Footers/SimpleFooter";
 
 // Material Kit 2 React page layout routes
 import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import DefaultFooter from "examples/Footers/DefaultFooter";
 
 function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
@@ -164,7 +164,7 @@ function SignInBasic() {
         </Grid>
       </MKBox>
       <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
-        <SimpleFooter light />
+        <DefaultFooter />
       </MKBox>
     </>
   );

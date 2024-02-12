@@ -153,52 +153,7 @@ function Download() {
           </GridItemWrapper>
         </ContainerWrapper>
       </MKBox>
-      {/* <Container variant="gradient" sx={{ overflow: "hidden", bgcolor: "#3d55f2", p: 2 }}>
-        <Grid container item xs={6} mx="auto">
-          <MKBox textAlign="center">
-            <MKTypography variant="h1" mt={6} mb={3}>
-              Build in
-            </MKTypography>
-            <Grid container spacing={1} justifyContent="center">
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Figma">
-                  <MKBox component="a" href="https://www.figma.com" target="_blank">
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/figma.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="React">
-                  <MKBox component="a" href="https://react.dev/" target="_blank">
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Ruby on Rails">
-                  <MKBox component="a" href="#" target="_blank">
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-            </Grid>
-          </MKBox>
-        </Grid>
-      </Container> */}
     </MKBox>
   );
 }
-
 export default Download;
