@@ -107,53 +107,59 @@ function Download() {
     window.open("https://app.gumroad.com/signup", "_blank");
   };
   return (
-    <MKBox component="section" py={{ xs: 0, sm: 12 }}>
-      <MKBox
-        variant="gradient"
-        position="relative"
-        borderRadius="xl"
-        sx={{ overflow: "hidden", bgcolor: "#fc72e0", p: 1 }}
-      >
+    <>
+      <MKTypography variant="h1" color="white">
+        asd
+      </MKTypography>
+
+      <MKBox component="section">
         <MKBox
-          // component="img"
-          // src={bgImage}
-          // alt="pattern-lines"
-          position="absolute"
-          top={0}
-          left={0}
-          width="100%"
-          zIndex={1}
-          opacity={0.6}
-        />
-        <ContainerWrapper>
-          <MKTypography variant="h1" color="white"></MKTypography>
+          variant="gradient"
+          position="relative"
+          borderRadius="xl"
+          sx={{ overflow: "hidden", bgcolor: "#fc72e0", p: 1 }}
+        >
+          <MKBox
+            // component="img"
+            // src={bgImage}
+            // alt="pattern-lines"
+            position="absolute"
+            top={0}
+            left={0}
+            width="100%"
+            zIndex={1}
+            opacity={0.6}
+          />
+          <ContainerWrapper>
+            <MKTypography variant="h1" color="white"></MKTypography>
 
-          <GridItemWrapper>
-            <MKTypography
-              variant="h1"
-              color="white"
-              sx={{ m: 10, fontFamily: "sansserif" }} // Specify the font family
-            >
-              17. Share your work. <br /> Someone out there needs it.
-            </MKTypography>
+            <GridItemWrapper>
+              <MKTypography
+                variant="h1"
+                color="white"
+                sx={{ m: 10, fontFamily: "sansserif" }} // Specify the font family
+              >
+                17. Share your work. <br /> Someone out there needs it.
+              </MKTypography>
 
-            <ButtonContainer sx={{ m: 10 }}>
-              <BoxYellow>
-                <BoxRed>
-                  <MyBtnStartSelling
-                    onClick={handleStartSellingClick} // Add onClick event
-                    sx={{ px: 9, py: 1.5 }}
-                  >
-                    {" "}
-                    Start Selling
-                  </MyBtnStartSelling>{" "}
-                </BoxRed>
-              </BoxYellow>
-            </ButtonContainer>
-          </GridItemWrapper>
-        </ContainerWrapper>
+              <ButtonContainer sx={{ m: 10 }}>
+                <BoxYellow>
+                  <BoxRed>
+                    <MyBtnStartSelling
+                      onClick={handleStartSellingClick} // Add onClick event
+                      sx={{ px: 9, py: 1.5 }}
+                    >
+                      {" "}
+                      Start Selling
+                    </MyBtnStartSelling>{" "}
+                  </BoxRed>
+                </BoxYellow>
+              </ButtonContainer>
+            </GridItemWrapper>
+          </ContainerWrapper>
+        </MKBox>
       </MKBox>
-    </MKBox>
+    </>
   );
 }
 export default Download;

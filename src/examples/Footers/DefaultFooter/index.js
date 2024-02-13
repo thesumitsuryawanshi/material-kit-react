@@ -6,11 +6,11 @@ import MKTypography from "components/MKTypography";
 import Typography from "components/MKTypography";
 import MKBox from "components/MKBox";
 
-import meta from "../../../assets/MyImages/meta.png";
-import Pinterest from "../../../assets/MyImages/pinterest.png";
-import YouTube from "../../../assets/MyImages/youtube.png";
-import twitter from "../../../assets/MyImages/twitter.png";
-import insta from "../../../assets/MyImages/insta.png";
+import meta from "../../../assets/MyImages/Social Icons/meta.png";
+import Pinterest from "../../../assets/MyImages/Social Icons/pinterest.png";
+import YouTube from "../../../assets/MyImages/Social Icons/youtube.png";
+import twitter from "../../../assets/MyImages/Social Icons/twitter.png";
+import insta from "../../../assets/MyImages/Social Icons/insta.png";
 
 import React, { useState } from "react";
 
