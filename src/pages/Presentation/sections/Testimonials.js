@@ -6,14 +6,7 @@ import PeopleInParkSVG from "assets/MyImages/gumroad_poeple_reaction.svg"; // Im
 function Testimonials() {
   return (
     <Card>
-      <MKBox
-        p={5}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        height="100%"
-        width="100%"
-      >
+      <MKBox display="flex" alignItems="center" justifyContent="center" height="100%" width="100%">
         {/* Render SVG using imported component */}
         <PeopleInParkSVG />
       </MKBox>

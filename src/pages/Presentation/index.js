@@ -119,6 +119,8 @@ function Presentation() {
         <Counters />
         <Information />
         <DesignBlocks />
+
+        {/* 14. the smiling girl */}
         <Pages />
 
         {/* 15. doller count Section */}
