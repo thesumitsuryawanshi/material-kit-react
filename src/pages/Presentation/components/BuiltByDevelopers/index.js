@@ -1,64 +1,82 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import Gcoin1 from "../../../../assets/MyImages/GumroadallSVG/gcoins.svg";
+import Gcoin2 from "../../../../assets/MyImages/GumroadallSVG/gcoin2.svg";
+import Gcoin3 from "../../../../assets/MyImages/GumroadallSVG/gcoin3.svg";
+import Gcoin4 from "../../../../assets/MyImages/GumroadallSVG/gcoin4.svg";
+import Gcoin5 from "../../../../assets/MyImages/GumroadallSVG/gcoin4.svg";
 
 function BuiltByDevelopers() {
-  const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
-
   return (
-    <MKBox
-      display="flex"
+    <Grid
+      container
       alignItems="center"
-      borderRadius="xl"
+      justifyContent="center"
+      height="100%"
+      width="100%"
+      m={6}
       p={6}
-      sx={{
-        backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-          `${linearGradient(
-            rgba(gradients.dark.main, 0.8),
-            rgba(gradients.dark.state, 0.8)
-          )}, url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      <Grid
+      <MKBox
+        sx={{ bgcolor: "#fff", position: "relative" }}
         display="flex"
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        item
-        xs={12}
-        lg={6}
-        sx={{ ml: { xs: 0, lg: 6 } }}
+        height="100%"
+        width="100%"
       >
-        <MKTypography variant="h1" color="white" fontWeight="bold">
-          $3,120,380
-        </MKTypography>
-        <MKTypography variant="body1" color="white" opacity={0.8} m={6}>
-          The amount of income earned by Gumroad digital entrepreneurs last week. <br></br>
-        </MKTypography>
-      </Grid>
-    </MKBox>
+        <Grid item sx={{ position: "absolute", left: 5, top: 140, z: 123 }}>
+          <Gcoin1 />
+        </Grid>
+
+        <Grid
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-between"
+        >
+          <MKTypography
+            variant="h1"
+            color="black"
+            textAlign="center"
+            sx={{ fontFamily: "serif", fontSize: 140 }}
+          >
+            $3,117,343
+          </MKTypography>
+
+          <MKTypography
+            variant="h1"
+            color="black"
+            m={5}
+            textAlign="center"
+            sx={{ fontFamily: "serif", fontSize: 27 }}
+          >
+            The amount of income earned by Gumroad <br></br> digital entrepreneurs last week.
+          </MKTypography>
+          <Grid item sx={{ position: "absolute", left: 1160, top: -270 }}>
+            <Gcoin3 />
+          </Grid>
+          <Grid item sx={{ position: "absolute", left: 1420, top: -190 }}>
+            <Gcoin4 />
+          </Grid>
+          <Grid item sx={{ position: "absolute", left: 1250, top: 190 }}>
+            <Gcoin2 />
+          </Grid>
+          <Grid item sx={{ position: "absolute", right: 1210, top: 40 }}>
+            <Gcoin5 />
+          </Grid>
+        </Grid>
+      </MKBox>
+    </Grid>
   );
 }
 
 export default BuiltByDevelopers;
+
+// <Grid item sx={{ position: "relative", right: -70, bottom: -70 }}>
+//   <TempIcon />
+// </Grid>

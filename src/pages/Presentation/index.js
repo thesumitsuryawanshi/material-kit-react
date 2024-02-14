@@ -120,10 +120,10 @@ function Presentation() {
         <Information />
         <DesignBlocks />
         <Pages />
-        <Container sx={{ mt: 6 }}>
-          {/* 15. $3,120,380 Amount Section */}
-          <BuiltByDevelopers />
-        </Container>
+
+        {/* 15. doller count Section */}
+        <BuiltByDevelopers />
+
         {/* 16. PeoplesInPark*/}
         <Testimonials />
         {/* 17. goto login page */}

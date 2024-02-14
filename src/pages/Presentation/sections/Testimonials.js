@@ -1,7 +1,7 @@
 import MKBox from "components/MKBox";
 import Card from "@mui/material/Card";
 
-import { ReactComponent as PeopleInParkSVG } from "assets/MyImages/gumroad_poeple_reaction.svg"; // Import SVG as a React component
+import PeopleInParkSVG from "assets/MyImages/gumroad_poeple_reaction.svg"; // Import SVG as a React component
 
 function Testimonials() {
   return (
