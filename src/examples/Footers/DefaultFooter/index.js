@@ -59,7 +59,7 @@ function DefaultFooter() {
               flexDirection: "column",
             }}
           >
-            <MKTypography display="flex" p={6} variant="h1">
+            <MKTypography display="flex" fontFamily="san-serif" p={6} variant="h1">
               Subscribe to get tips and tactics to grow the way you want.
             </MKTypography>
             <Grid container px={3} mb={5} alignItems="center">
@@ -75,6 +75,7 @@ function DefaultFooter() {
                     fontStyle: "Bold",
                     color: "Black",
                     fontSize: 17,
+                    fontFamily: "san-serif",
                     width: "calc(100%)",
                     height: 75,
                     textAlign: "Start",
@@ -182,7 +183,7 @@ function DefaultFooter() {
               <MKTypography
                 component="img"
                 src={twitter}
-                alt="Meta Icon"
+                alt="TwitterIcon"
                 width={32}
                 height={32}
                 mr={2.5}
@@ -190,7 +191,7 @@ function DefaultFooter() {
               <MKTypography
                 component="img"
                 src={Pinterest}
-                alt="Meta Icon"
+                alt="Pinterest Icon"
                 width={32}
                 height={32}
                 mr={2.5}
@@ -198,7 +199,7 @@ function DefaultFooter() {
               <MKTypography
                 component="img"
                 src={YouTube}
-                alt="Meta Icon"
+                alt="YT Icon"
                 width={32}
                 height={32}
                 mr={2.5}
@@ -206,7 +207,7 @@ function DefaultFooter() {
               <MKTypography
                 component="img"
                 src={insta}
-                alt="Meta Icon"
+                alt="Insta Icon"
                 width={32}
                 height={32}
                 mr={2.5}

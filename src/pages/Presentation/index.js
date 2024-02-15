@@ -118,6 +118,8 @@ function Presentation() {
       >
         <Counters />
         <Information />
+
+        {/* 13. inspiration Tabs */}
         <DesignBlocks />
 
         {/* 14. the smiling girl */}

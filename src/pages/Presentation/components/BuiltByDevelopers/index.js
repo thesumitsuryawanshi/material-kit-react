@@ -70,6 +70,9 @@ function BuiltByDevelopers() {
             <Gcoin5 />
           </Grid>
         </Grid>
+        <Grid item sx={{ position: "absolute", right: 1410, top: -150 }}>
+          <Gcoin2 />
+        </Grid>
       </MKBox>
     </Grid>
   );
