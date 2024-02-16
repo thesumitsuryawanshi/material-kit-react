@@ -159,26 +159,48 @@ function DesignBlocks() {
 
   const renderTags = (tags) =>
     tags.map((tag, index) => (
-      <Button key={index} size="small" sx={{ mr: 1, mb: 1 }} variant="contained">
+      <Button
+        key={index}
+        size="small"
+        sx={{ mr: 1, mb: 1, border: "1px solid black", fontWeight: "bold" }}
+        variant="contained"
+        color="white"
+      >
         {tag}
       </Button>
     ));
 
   const sections = sectionData.map((section, index) => (
-    <Grid key={index} px={5} sx={{ bgcolor: section.color }} style={{ textAlign: "start" }} p={6}>
-      <Card sx={{ maxWidth: 480, bgcolor: section.color }}>
-        <CardMedia sx={{ height: 80 }} image={section.icon} title="SVG" />
-        <section.icon />
-
+    <Grid
+      key={index}
+      sx={{ width: "33%", p: 1, textAlign: "start" }}
+      style={{ display: "inline-block" }}
+    >
+      <Card
+        sx={{
+          backgroundColor: section.color,
+          margin: 1,
+          borderRadius: 5,
+          border: "1px solid black",
+        }}
+      >
+        <CardMedia
+          sx={{ height: 10, width: 10, objectFit: "contain", margin: "auto" }}
+          image={section.icon}
+          title="SVG"
+        />
+        <section.icon></section.icon>
         <CardContent>
-          <Typography gutterBottom variant="h3" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             {section.headtext}
           </Typography>
-          <Typography variant="h4" color="text.secondary">
+          <Typography variant="h6" color="text.secondary">
             {section.subheadtext}
           </Typography>
-          <Typography variant="body2">Popular Tags</Typography>
-          {renderTags(section.tags)}
+          <Typography variant="body2" m={2} style={{ fontWeight: "bold" }}>
+            Popular Tags
+          </Typography>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>{renderTags(section.tags)}</div>
         </CardContent>
       </Card>
     </Grid>
@@ -186,11 +208,10 @@ function DesignBlocks() {
 
   return (
     <MKBox component="section" my={6} py={6}>
-      <Container bgcolor="#000">
+      <Container>
         <Grid
           container
           item
-          bgcolor="#000"
           xs={12}
           flexDirection="column"
           alignItems="center"
@@ -203,12 +224,27 @@ function DesignBlocks() {
             container
             sx={{ mb: 5 }}
           />
-          <MKTypography variant="h1">Looking for inspiration on what you can sell?</MKTypography>
-          <MKTypography variant="body1" color="text">
+          <MKTypography
+            variant="h1"
+            sx={{ fontFamily: "", fontSize: 60, fontStyle: "Bold", color: "black" }}
+            fontFamily="Mabry pro , Sans-serif "
+          >
+            Looking for inspiration on what <br></br> you can sell?
+          </MKTypography>
+          <MKTypography
+            variant="body1"
+            color="text"
+            sx={{
+              fontFamily: "Mabry pro , Sans-serif",
+              fontSize: 20,
+              fontStyle: "Bold",
+              color: "black",
+            }}
+            fontFamily="Mabry pro , Sans-serif"
+          >
             Discover the best-selling products and creators on Gumroad.
           </MKTypography>
         </Grid>
-        <MKBox display="flex" flexdirection="row" bgcolor="#000"></MKBox>
       </Container>
 
       <React.Fragment style={{ textAlign: "center", justifyContent: "center" }}>
@@ -219,5 +255,4 @@ function DesignBlocks() {
     </MKBox>
   );
 }
-
 export default DesignBlocks;

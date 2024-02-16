@@ -1,18 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -28,12 +13,14 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
-import Information from "pages/Presentation/sections/Information";
+import TrendSVCGuySection from "pages/Presentation/sections/trendsvcGuySection";
+import MaxulichneyGuySection from "pages/Presentation/sections/MaxulichneyGuySection";
+import SellAnywhere from "pages/Presentation/sections/SellAnywhere";
 import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 import Download from "pages/Presentation/sections/Download";
+import SellToAnyone from "pages/Presentation/sections/SellToAnyone";
 
 // Presentation page components
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
@@ -107,7 +94,7 @@ function Presentation() {
 
       <Card
         sx={{
-          p: 2,
+          p: 5,
           mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,
@@ -116,18 +103,20 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Counters />
-        <Information />
-
+        {/* MaxulichneyGuySection */}
+        <MaxulichneyGuySection />
+        {/* originally trendsvc guy section */}
+        <SellToAnyone />
+        {/* originally trendsvc guy section */}
+        <TrendSVCGuySection></TrendSVCGuySection>
+        {/* sell anywhere */}
+        <SellAnywhere />
         {/* 13. inspiration Tabs */}
         <DesignBlocks />
-
         {/* 14. the smiling girl */}
         <Pages />
-
         {/* 15. doller count Section */}
         <BuiltByDevelopers />
-
         {/* 16. PeoplesInPark*/}
         <Testimonials />
         {/* 17. goto login page */}
