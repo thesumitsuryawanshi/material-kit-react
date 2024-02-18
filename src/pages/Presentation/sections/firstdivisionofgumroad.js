@@ -92,16 +92,16 @@ function firstdivisionofgumroad() {
         <MKTypography
           variant="h1"
           sx={{
-            fontSize: 60,
+            fontSize: 110,
             fontStyle: "Bold",
             color: "#000 ",
             m: 6,
-
-            fontFamily: "serif ",
+            p: 6,
+            fontFamily: "Mabry pro, sans-serif",
             textAlign: "center",
           }}
         >
-          Go from zero to $1{" "}
+          Go from <br></br> zero to $1{" "}
         </MKTypography>
         <MKTypography
           variant="body1"
@@ -109,7 +109,7 @@ function firstdivisionofgumroad() {
           sx={{
             textAlign: "center",
             fontSize: 30,
-            fontFamily: "serif ",
+            fontFamily: "Mabry pro, sans-serif",
             color: "#000",
             fontStyle: "Bold",
           }}

@@ -1,72 +1,104 @@
-// @mui material components
-import Grid from "@mui/material/Grid";
-
-// Material Kit 2 React components
-import MKBox from "components/MKBox";
+import Grid from "@mui/material/Grid"; // Import Grid component
+import GumroadProfileandTutorial from "../../../assets/MyImages/GumroadallSVG/gumroad profile and tutorial.svg";
 import MKTypography from "components/MKTypography";
-
-// Images
-import TutorialGumroadSVG from "../../../assets/MyImages/GumroadallSVG/gumroad profile and tutorial.svg";
 
 function SellAnywhere() {
   return (
-    <MKBox
-      py={6}
-      my={6}
-      spacing={2}
+    <Grid
+      container
       sx={{
-        margin: 1,
-        borderRadius: 5,
-        border: "1px solid black",
         display: "flex",
         flexDirection: "row",
+        borderRadius: 2,
+        border: "1px solid black",
+        textAlign: "center",
+        justifyContent: "space-evenly",
       }}
     >
       <Grid
+        item
         xs={6}
-        p={3}
-        m={3}
-        alignItems="center"
         sx={{
-          mx: "auto",
-          borderRadius: 5,
-          border: "1px solid black",
+          fontSize: 60,
+          fontStyle: "Bold",
           bgcolor: "#FEC901",
+          m: 0,
+          pt: 10,
+          fontFamily: "serif",
+          textAlign: "center",
+          borderRight: "1px solid black",
         }}
       >
-        <TutorialGumroadSVG></TutorialGumroadSVG>
-      </Grid>
-
-      <Grid container item xs={6} p={3} m={3} alignItems="center" sx={{ mx: "auto" }}>
         <MKTypography
-          variant="h1"
           sx={{
-            fontFamily: "Mabry pro , Sans-serif ",
             fontSize: 60,
             fontStyle: "Bold",
-            color: "black",
-            mb: 6,
+            m: 1,
+            p: 1,
+            fontFamily: "serif",
+            textAlign: "center",
+            bgcolor: "#FEC901",
+            color: "#FEC901",
           }}
-          fontFamily="Mabry pro , Sans-serif "
         >
-          Sell anywhere
-        </MKTypography>
-        <MKTypography
-          variant="body1"
-          color="text"
-          sx={{
-            fontFamily: "Mabry pro , Sans-serif",
-            fontSize: 30,
-            fontStyle: "Bold",
-          }}
-          fontFamily="Mabry pro , Sans-serif"
-        >
-          Create and customize your storefront with our all-in-one platform or choose to use your
-          personal site instead. With Zapier, you can seamlessly connect your Gumroad account to
-          thousands of apps in your current stack.
+          <GumroadProfileandTutorial height="100%" weight="100% " />
         </MKTypography>
       </Grid>
-    </MKBox>
+
+      <Grid
+        item
+        xs={6}
+        sx={{
+          fontSize: 60,
+          fontStyle: "Bold",
+          bgcolor: "#fff",
+          m: 0,
+          p: 0,
+          fontFamily: "serif",
+          textAlign: "center",
+        }}
+      >
+        <MKTypography
+          sx={{
+            fontSize: 35,
+            fontStyle: "bold",
+            m: 6,
+            p: 6,
+            textAlign: "Start",
+            fontFamily: "serif",
+            bgcolor: "#fff",
+            color: "#000",
+          }}
+        >
+          <MKTypography
+            sx={{
+              fontSize: 70,
+              fontStyle: "bold",
+              textAlign: "Start",
+              fontFamily: "serif",
+              color: "#000",
+            }}
+          >
+            Sell Anywhere
+          </MKTypography>
+          <br></br>
+          <MKTypography
+            sx={{
+              fontSize: 30,
+              fontStyle: "bold",
+
+              textAlign: "Start",
+              fontFamily: "serif",
+              color: "#000",
+            }}
+          >
+            Sell anywhere Create and customize your storefront with our all-in-one platform or
+            choose to use your personal site instead. With Zapier, you can seamlessly connect your
+            Gumroad account to thousands of apps in your current stack.
+          </MKTypography>
+        </MKTypography>
+      </Grid>
+    </Grid>
   );
 }
 

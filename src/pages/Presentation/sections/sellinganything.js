@@ -1,85 +1,123 @@
-// @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid"; // Import Grid component
+import PayMonthlySVG from "../../../assets/MyImages/GumroadallSVG/pay monthly.svg";
 
-// Material Kit 2 React components
-import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-
-// Images
-import TutorialGumroadSVG from "../../../assets/MyImages/GumroadallSVG/gumroad profile and tutorial.svg";
 
 function SellAnything() {
   return (
-    <MKBox
-      py={6}
-      my={6}
-      spacing={2}
+    <Grid
+      container
       sx={{
-        margin: 1,
-        borderRadius: 5,
-        border: "1px solid black",
         display: "flex",
         flexDirection: "row",
+        borderRadius: 2,
+        border: "1px solid black",
+        textAlign: "center",
+        justifyContent: "space-evenly",
       }}
     >
       <Grid
+        item
         xs={6}
-        p={3}
-        m={3}
-        alignItems="center"
         sx={{
-          mx: "auto",
-          borderRadius: 5,
-          border: "1px solid black",
+          fontSize: 60,
+          fontStyle: "Bold",
           bgcolor: "#23A195",
+          m: 0,
+          pt: 10,
+          fontFamily: "serif",
+          textAlign: "center",
+          borderRight: "1px solid black",
         }}
       >
-        <TutorialGumroadSVG></TutorialGumroadSVG>
-      </Grid>
-
-      <Grid container item xs={6} p={3} m={3} alignItems="center" sx={{ mx: "auto" }}>
         <MKTypography
-          variant="h1"
           sx={{
-            fontFamily: "Mabry pro , Sans-serif ",
             fontSize: 60,
             fontStyle: "Bold",
-            color: "black",
-            mb: 6,
+            m: 1,
+            p: 1,
+            fontFamily: "serif",
+            textAlign: "center",
+            bgcolor: "#23A195",
+            color: "#23A195",
           }}
-          fontFamily="Mabry pro , Sans-serif "
         >
-          SellAnythings
-        </MKTypography>
-        <MKTypography
-          variant="body1"
-          color="text"
-          sx={{
-            fontFamily: "Mabry pro , Sans-serif",
-            fontSize: 30,
-            fontStyle: "Bold",
-          }}
-          fontFamily="Mabry pro , Sans-serif"
-        >
-          Video lessons. Monthly subscriptions. Physical products. Whatever! Gumroad was created to
-          help you experiment with all kinds of ideas and formats.
-        </MKTypography>
-        <MKTypography
-          variant="body1"
-          color="text"
-          sx={{
-            fontFamily: "Mabry pro , Sans-serif",
-            fontSize: 24,
-            fontStyle: "black",
-          }}
-          fontFamily="Mabry pro , Sans-serif"
-        >
-          <br></br> → Sell your Top 10 lists <br></br> → Sell your crypto tips <br></br> → Sell your
-          fractal pack <br></br>→ Sell your keto cookbook <br></br>→Sell your C4D scenes <br></br> →
-          Sell your new emojis <br></br> → Seriously, sell anything!
+          <PayMonthlySVG height="100%" weight="100% " />
         </MKTypography>
       </Grid>
-    </MKBox>
+
+      <Grid
+        item
+        xs={6}
+        sx={{
+          fontSize: 60,
+          fontStyle: "Bold",
+          bgcolor: "#fff",
+          m: 0,
+          p: 0,
+          fontFamily: "serif",
+          textAlign: "center",
+        }}
+      >
+        <MKTypography
+          sx={{
+            fontSize: 35,
+            fontStyle: "bold",
+            m: 6,
+            p: 6,
+            textAlign: "Start",
+            fontFamily: "serif",
+            bgcolor: "#fff",
+            color: "#000",
+          }}
+        >
+          <MKTypography
+            sx={{
+              fontSize: 70,
+              fontStyle: "bold",
+              textAlign: "Start",
+              fontFamily: "serif",
+              color: "#000",
+            }}
+          >
+            Sell anything
+          </MKTypography>
+          <br></br>
+          <MKTypography
+            sx={{
+              fontSize: 30,
+              fontStyle: "bold",
+
+              textAlign: "Start",
+              fontFamily: "serif",
+              color: "#000",
+            }}
+          >
+            Video Lessons Monthly subscriptions. Physical products. Whatever! Gumroad was created to
+            help you experiment with all kinds of ideas and formats.
+          </MKTypography>
+
+          <MKTypography
+            sx={{
+              fontSize: 24,
+              fontStyle: "bold",
+              textAlign: "Start",
+              fontFamily: "serif",
+              color: "#000",
+            }}
+          >
+            {" "}
+            <br></br> → Sell your Top 10 lists
+            <br></br> → Sell your crypto tips
+            <br></br> → Sell your fractal pack
+            <br></br> → Sell your keto cookbook
+            <br></br> → Sell your C4D scenes
+            <br></br> → Sell your new emojis
+            <br></br> → Seriously, sell anything!
+          </MKTypography>
+        </MKTypography>
+      </Grid>
+    </Grid>
   );
 }
 

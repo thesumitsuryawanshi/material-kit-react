@@ -37,9 +37,10 @@ function MakeYourOwnRoad() {
             fontFamily: "serif",
             textAlign: "center",
             bgcolor: "#B23287",
+            color: "#000",
           }}
         >
-          Place Small Bets. <br /> Thats Exciting!
+          Don’t take risks. <br /> That’s scary!
         </MKTypography>
       </Grid>
 
@@ -65,9 +66,10 @@ function MakeYourOwnRoad() {
             fontFamily: "serif",
             textAlign: "center",
             bgcolor: "#FE91E8",
+            color: "#000",
           }}
         >
-          Don’t take risks. <br /> That’s scary!
+          Place Small Bets. <br /> Thats Exciting!
         </MKTypography>
       </Grid>
     </Grid>
