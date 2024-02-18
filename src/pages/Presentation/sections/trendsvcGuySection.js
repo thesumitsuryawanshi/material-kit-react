@@ -15,7 +15,7 @@ function trendsvcGuySection() {
       py={6}
       my={6}
       sx={{
-        margin: 1,
+        margin: 2,
         borderRadius: 5,
         justifyContent: "space-between",
         border: "1px solid black",
@@ -75,18 +75,9 @@ function trendsvcGuySection() {
             DruRiley sells business insights and expertise
           </MKTypography>
         </Grid>
-        <Grid
-          container
-          item
-          xs={11}
-          spacing={3}
-          p={3}
-          m={3}
-          alignItems="center"
-          justify="center"
-          sx={{ mx: "auto", borderRadius: 5, border: "1px solid black" }}
-        >
-          <img src={counterSectionMan} alt="Counter Section Man" />
+
+        <Grid p={1} m={2} alignItems="center" justify="center">
+          <img src={counterSectionMan} alt="MaxulichneyGuySectionPic" />
         </Grid>
       </Container>
     </MKBox>
