@@ -17,12 +17,18 @@ import TrendSVCGuySection from "pages/Presentation/sections/trendsvcGuySection";
 import MaxulichneyGuySection from "pages/Presentation/sections/MaxulichneyGuySection";
 import SellAnywhere from "pages/Presentation/sections/SellAnywhere";
 import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "pages/Presentation/sections/Pages";
-import Testimonials from "pages/Presentation/sections/Testimonials";
+import Pages from "../Presentation/sections/Pages";
+
+import PeopleInPark from "pages/Presentation/sections/PeopleInPark";
 import Download from "pages/Presentation/sections/Download";
 import SellToAnyone from "pages/Presentation/sections/SellToAnyone";
 
-// Presentation page components
+import Firstdivisionofgumroad from "pages/Presentation/sections/firstdivisionofgumroad";
+import SellAnything from "pages/Presentation/sections/sellinganything";
+import MakeYourOwnRoad from "pages/Presentation/sections/MakeYourOwnRoad";
+import TwoSVGS from "pages/Presentation/sections/TwoSVGS";
+import TwoText from "pages/Presentation/sections/TwoText";
+import AnimatedGuyGumroadPathway from "pages/Presentation/sections/GumroadPathway";
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
@@ -48,7 +54,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function Presentation() {
   return (
     <>
-      <Container maxWidth="sm" justifyContent="center">
+      <Container justifyContent="center">
         <MKTypography
           variant="h1"
           align="center"
@@ -56,9 +62,8 @@ function Presentation() {
           color="red"
           px={{ xs: 6, lg: 12 }}
           m={3}
-        >
-          <div>GUMROAD</div>
-        </MKTypography>
+          sx={{ fontSize: "12rem" }} // Increase font size here
+        ></MKTypography>
       </Container>
 
       <DefaultNavbar
@@ -87,7 +92,7 @@ function Presentation() {
             <Item>Section 1</Item>
           </Grid>
           <Grid item xs={6}>
-            <Item>Section 2</Item>
+            <Item>Section 1</Item>
           </Grid>
         </Grid>
       </MKBox>
@@ -103,6 +108,14 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        <Firstdivisionofgumroad></Firstdivisionofgumroad>
+        <AnimatedGuyGumroadPathway />
+        {/* <GumroadPathway /> */}
+        <TwoText></TwoText>
+        <TwoSVGS></TwoSVGS>
+        {/* just a text of MakeYourOwnRoad  */}
+        <MakeYourOwnRoad />
+        <SellAnything />
         {/* MaxulichneyGuySection */}
         <MaxulichneyGuySection />
         {/* originally trendsvc guy section */}
@@ -118,7 +131,7 @@ function Presentation() {
         {/* 15. doller count Section */}
         <BuiltByDevelopers />
         {/* 16. PeoplesInPark*/}
-        <Testimonials />
+        <PeopleInPark />
         {/* 17. goto login page */}
         <Download />
         {/* 18.intro section */}

@@ -108,10 +108,6 @@ function Download() {
   };
   return (
     <>
-      <MKTypography variant="h1" color="white">
-        asd
-      </MKTypography>
-
       <MKBox component="section">
         <MKBox
           variant="gradient"
