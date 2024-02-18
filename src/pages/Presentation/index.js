@@ -19,7 +19,7 @@ import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import Pages from "../Presentation/sections/Pages";
 
 import PeopleInPark from "pages/Presentation/sections/PeopleInPark";
-import Download from "pages/Presentation/sections/Download";
+import StartSelling from "pages/Presentation/sections/StartSelling";
 import SellToAnyone from "pages/Presentation/sections/SellToAnyone";
 
 import Firstdivisionofgumroad from "pages/Presentation/sections/firstdivisionofgumroad";
@@ -33,6 +33,7 @@ import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
+// import GUMROAD from "../../assets/MyImages/GumroadallSVG/gumroad_text_two.svg";
 
 // Images
 
@@ -43,16 +44,21 @@ function Presentation() {
   return (
     <>
       <MKBox m={4} p={4}>
+        {/* <Grid component="img" src={GUMROAD} alt="GUMROAD" width={32} height={32} mr={2.5}></Grid> */}
+
         <MKBox justifyContent="center">
           <MKTypography
             variant="h1"
             align="center"
+            fontFamily="Mabry pro "
             gutterBottom
-            color="red"
+            color="black"
             px={{ xs: 6, lg: 12 }}
             m={3}
-            sx={{ fontSize: "12rem" }} // Increase font size here
-          ></MKTypography>
+            sx={{ fontSize: "10rem" }} // Increase font size here
+          >
+            GUMROAD
+          </MKTypography>
         </MKBox>
 
         <DefaultNavbar
@@ -91,7 +97,7 @@ function Presentation() {
         {/* 16. PeoplesInPark*/}
         <PeopleInPark />
         {/* 17. goto login page */}
-        <Download />
+        <StartSelling />
         {/* 18.intro section */}
         <MKBox pt={6} pb={6}>
           <Container>

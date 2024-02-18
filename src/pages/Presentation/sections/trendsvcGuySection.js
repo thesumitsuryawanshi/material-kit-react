@@ -7,7 +7,7 @@ import MKBox from "components/MKBox";
 // Material Kit 2 React examples
 
 import MKTypography from "components/MKTypography";
-import counterSectionMan from "../../../assets/MyImages/counter_section_man.png";
+import counterSectionMan from "../../../assets/MyImages/trendsvc.png";
 
 function trendsvcGuySection() {
   return (

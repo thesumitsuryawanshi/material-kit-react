@@ -11,7 +11,7 @@ function MakeYourOwnRoad() {
             m: 4,
             py: 3,
             alignItems: "center",
-            fontFamily: "Mabry pro, sans-serif",
+            fontFamily: "serif",
             fontSize: "72", // Increase font size to 72px
           }}
           color="#000"
@@ -21,8 +21,8 @@ function MakeYourOwnRoad() {
 
         <MKTypography
           variant="h3"
-          color="#fff"
-          sx={{ my: 3, px: 30, fontFamily: "Mabry pro, sans-serif" }} // Specify the font family
+          color="#f00"
+          sx={{ my: 3, px: 30, fontFamily: "serif" }} // Specify the font family
           font-size="1.25rem"
           font-weight="400"
         >

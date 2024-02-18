@@ -33,9 +33,10 @@ function DefaultFooter() {
     <Card
       sx={{
         display: "flex",
+
         flexDirection: "row",
         borderRadius: "xl",
-        bgcolor: "#15191C",
+        bgcolor: "#000",
         p: 6,
         m: 2,
       }}
@@ -48,9 +49,17 @@ function DefaultFooter() {
             sx={{
               display: "flex",
               flexDirection: "column",
+              bgcolor: "#000",
             }}
           >
-            <MKTypography display="flex" fontFamily="san-serif" p={6} variant="h1">
+            <MKTypography
+              display="flex"
+              color="white"
+              bgcolor="#000"
+              fontFamily="san-serif"
+              p={6}
+              variant="h1"
+            >
               Subscribe to get tips and tactics to grow the way you want.
             </MKTypography>
             <Grid container px={3} mb={5} alignItems="center">
@@ -63,9 +72,12 @@ function DefaultFooter() {
                   required
                   style={{
                     borderRadius: "10px 0 0 10px",
+                    border: "1px solid black",
                     fontStyle: "Bold",
-                    color: "Black",
-                    fontSize: 17,
+                    color: "white",
+                    bgcolor: "#000",
+
+                    fontSize: 18,
                     fontFamily: "san-serif",
                     width: "calc(100%)",
                     height: 75,
@@ -77,7 +89,10 @@ function DefaultFooter() {
               </Grid>
               <MKButton
                 onClick={handleClick}
-                style={{ backgroundColor: "#fc72e0", borderRadius: "0 10px 10px 0" }} // Set border radius for the button
+                style={{
+                  backgroundColor: "#fc72e0",
+                  borderRadius: "0 10px 10px 0",
+                }} // Set border radius for the button
                 size="lg"
                 m={6}
                 p={6}
@@ -122,7 +137,9 @@ function DefaultFooter() {
                       fill="black"
                     />
                   </svg>
-                  <MKTypography m={2}>Ⓒ Gumroad, Inc. </MKTypography>
+                  <MKTypography m={2} color="white">
+                    Ⓒ Gumroad, Inc.{" "}
+                  </MKTypography>
                 </MKBox>
               </Grid>
             </Grid>
@@ -130,30 +147,36 @@ function DefaultFooter() {
         </Grid>
       </Grid>
 
-      <Grid alignItems="center" xs={7} px={4}>
-        <Card>
+      <Grid alignItems="center" xs={7} px={4} bgcolor="#000">
+        <Card bgcolor="#000">
           <Grid
+            border="1px solid white"
+            borderRadius="12px"
             component="div"
             sx={{
               display: "flex",
               flexDirection: "row",
+              bgcolor: "#000",
+              color: "#fff",
               alignItems: "center", // Align items vertically
               justifyContent: "space-between", // Distribute items
               height: "100%", // Set height to ensure equal distribution
             }}
           >
-            <MKBox p={6} display="flex" flexDirection="column">
-              <MKTypography>Help</MKTypography>
-              <MKTypography>Blog</MKTypography>
-              <MKTypography>Terms of Service</MKTypography>
+            <MKBox p={6} display="flex" color="#fff" flexDirection="column">
+              <MKTypography color="#fff">Help</MKTypography>
+
+              <MKTypography color="#fff">Blog</MKTypography>
+              <MKTypography color="#fff">Terms of Service</MKTypography>
             </MKBox>
-            <MKBox m={6} p={6} display="flex" flexDirection="column">
-              <MKTypography>Privacy Policy</MKTypography>
-              <MKTypography>Features</MKTypography>
-              <MKTypography>Pricing</MKTypography>
-              <MKTypography>Discover</MKTypography>
-              <MKTypography>Jobs</MKTypography>
-              <MKTypography>Board Meetings</MKTypography>
+            <MKBox m={6} p={6} display="flex" color="#fff" flexDirection="column">
+              <MKTypography color="#fff">Privacy Policy</MKTypography>
+              <MKTypography color="#fff">Features</MKTypography>
+              <MKTypography color="#fff">Pricing</MKTypography>
+              <MKTypography color="#fff">Discover</MKTypography>
+              <MKTypography color="#fff">Discover</MKTypography>
+              <MKTypography color="#fff">Jobs</MKTypography>
+              <MKTypography color="#fff">Board Meetings</MKTypography>
             </MKBox>
           </Grid>
           <MKTypography alignItems="center" px={5} m={5}>
@@ -162,6 +185,7 @@ function DefaultFooter() {
               flexDirection="row"
               justifyContent="space-evenly"
               alignItems="center"
+              bgcolor="#000"
             >
               <MKTypography
                 component="img"
