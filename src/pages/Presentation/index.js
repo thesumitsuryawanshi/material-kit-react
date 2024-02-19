@@ -8,7 +8,7 @@ import MKTypography from "components/MKTypography";
 import MKSocialButton from "components/MKSocialButton";
 
 // Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import DefaultNavBar from "../../examples/Navbars/DefaultNavbar/DefaultNavBar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
@@ -31,7 +31,6 @@ import AnimatedGuyGumroadPathway from "pages/Presentation/sections/GumroadPathwa
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
 // import GUMROAD from "../../assets/MyImages/GumroadallSVG/gumroad_text_two.svg";
 
@@ -44,38 +43,13 @@ function Presentation() {
   return (
     <>
       <MKBox>
-        {/* <Grid component="img" src={GUMROAD} alt="GUMROAD" width={32} height={32} mr={2.5}></Grid> */}
-
-        {/* <MKBox justifyContent="center">
-          <MKTypography
-            variant="h1"
-            align="center"
-            fontFamily="Mabry pro "
-            gutterBottom
-            color="black"
-            px={{ xs: 6, lg: 12 }}
-            m={3}
-            sx={{ fontSize: "10rem" }} // Increase font size here
-          >
-            GUMROAD
-          </MKTypography> */}
-
         <img
           src="https://assets-global.website-files.com/6171b265e5c8aa59b42c3472/618ea7afd990103829d614ff_gumroad-logo.svg"
           width="100%"
           height="100%"
         ></img>
 
-        <DefaultNavbar
-          routes={routes}
-          action={{
-            type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-react",
-            label: "free download",
-            color: "info",
-          }}
-          sticky
-        />
+        <DefaultNavBar />
 
         <Firstdivisionofgumroad></Firstdivisionofgumroad>
         <AnimatedGuyGumroadPathway />
