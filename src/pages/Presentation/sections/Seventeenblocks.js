@@ -3,7 +3,6 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
-import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
 import Card from "@mui/material/Card";
 
@@ -200,7 +199,9 @@ function Seventeenblocks() {
           <Typography variant="body2" m={2} style={{ fontWeight: "bold" }}>
             Popular Tags
           </Typography>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>{renderTags(section.tags)}</div>
+          <Typography style={{ display: "flex", flexWrap: "wrap" }}>
+            {renderTags(section.tags)}
+          </Typography>
         </CardContent>
       </Card>
     </Grid>
@@ -217,13 +218,6 @@ function Seventeenblocks() {
           alignItems="center"
           sx={{ textAlign: "center", m: 6, mx: "auto", px: 5 }}
         >
-          <MKBadge
-            variant="contained"
-            color="info"
-            badgeContent="Infinite Ways to Earn"
-            container
-            sx={{ mb: 5 }}
-          />
           <MKTypography
             variant="h1"
             sx={{ fontFamily: "", fontSize: 60, fontStyle: "Bold", color: "black" }}

@@ -27,7 +27,7 @@ import SellAnything from "pages/Presentation/sections/sellinganything";
 import MakeYourOwnRoad from "pages/Presentation/sections/MakeYourOwnRoad";
 import TwoSVGS from "pages/Presentation/sections/TwoSVGS";
 import TwoText from "pages/Presentation/sections/TwoText";
-import AnimatedGuyGumroadPathway from "pages/Presentation/sections/GumroadPathway";
+import TopAnimationGuy from "pages/Presentation/sections/TopAnimationGuy";
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
@@ -52,7 +52,7 @@ function Presentation() {
         <DefaultNavBar />
 
         <Firstdivisionofgumroad></Firstdivisionofgumroad>
-        <AnimatedGuyGumroadPathway />
+        <TopAnimationGuy />
         {/* <GumroadPathway /> */}
         <TwoText></TwoText>
         <TwoSVGS></TwoSVGS>

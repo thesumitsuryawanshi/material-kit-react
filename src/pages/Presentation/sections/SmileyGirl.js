@@ -4,7 +4,6 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import MKTypography from "components/MKTypography";
 import SmilingGirl from "../../../assets/MyImages/SmilingGirl.png";
-
 import DollerLogo from "../../../assets/MyImages/GumroadallSVG/doller.svg";
 import HowTo from "../../../assets/MyImages/GumroadallSVG/howTo.svg";
 
@@ -81,7 +80,7 @@ export default function SmileyGirl() {
         <Grid item sx={{ position: "absolute", left: 1100, top: 10610, z: 1230 }}>
           <DollerLogo />
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 1450, top: 10990, z: 1230 }}>
+        <Grid item sx={{ position: "absolute", left: 1550, top: 10990, z: 1230 }}>
           <HowTo />
         </Grid>
 
@@ -102,7 +101,7 @@ export default function SmileyGirl() {
             p: 1,
             position: "absolute",
             left: 1050,
-            top: 11130,
+            top: 10990,
             z: 1230,
           }}
         >

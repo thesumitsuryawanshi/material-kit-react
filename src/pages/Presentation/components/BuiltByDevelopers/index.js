@@ -66,7 +66,7 @@ function BuiltByDevelopers() {
           <Grid item sx={{ position: "absolute", left: 1250, top: 190 }}>
             <Gcoin2 />
           </Grid>
-          <Grid item sx={{ position: "absolute", right: 1210, top: 40 }}>
+          <Grid item sx={{ position: "absolute", right: 1310, top: 140 }}>
             <Gcoin5 />
           </Grid>
         </Grid>
