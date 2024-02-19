@@ -3,7 +3,7 @@ import Vegalia from "../../../assets/MyImages/vegalia.png";
 import { styled } from "@mui/system";
 import GreenWritingPen from "../../../assets/MyImages/GumroadallSVG/BlocksSVGS/paintbrush.svg";
 import Threecoins from "../../../assets/MyImages/GumroadallSVG/3gcoins.svg";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 // mycomponents
 const ButtonContainer = styled("div")({
   display: "flex",
@@ -62,6 +62,22 @@ const BoxYellow = styled("div")({
 import Grid from "@mui/material/Grid"; // Import Grid component
 
 import MKTypography from "components/MKTypography";
+
+const VegaliaBTN = styled("button")({
+  color: "black",
+  backgroundColor: "white",
+  borderRadius: 44,
+  transition: "all 0.3s ease 0s",
+  cursor: "pointer",
+  border: "3px solid #000",
+  display: "flex", // Use Flexbox
+  alignItems: "center", // Center items vertically
+  justifyContent: "center", // Center items horizontally
+  textAlign: "center",
+  "&:hover": {
+    transform: "translateY(-9px) translateX(-9px)",
+  },
+});
 
 function firstdivisionofgumroad() {
   const handleStartSellingClick = () => {
@@ -183,10 +199,12 @@ function firstdivisionofgumroad() {
               color: "#000",
             }}
           >
-            <Button
+            <VegaliaBTN
               sx={{
                 border: "2px solid black",
                 borderRadius: "25px",
+                py: 1,
+                px: 2,
                 fontWeight: "bold",
                 position: "absolute",
                 bgcolor: "#fff", // Change bgcolor to desired color
@@ -216,14 +234,13 @@ function firstdivisionofgumroad() {
                 />
               </svg>
               &nbsp; &nbsp; Vegalia
-            </Button>
+            </VegaliaBTN>
             <Grid sx={{ position: "absolute", left: 1560, top: 390, z: 30 }}>
               <GreenWritingPen />
             </Grid>
             <Grid sx={{ position: "absolute", left: 1160, top: 780, z: 30 }}>
               <Threecoins />
             </Grid>
-
             <img src={Vegalia} alt="MaxulichneyGuySectionPic" />
             <MKTypography
               pt={6}

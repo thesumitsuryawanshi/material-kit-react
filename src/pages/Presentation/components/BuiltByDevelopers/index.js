@@ -17,8 +17,8 @@ function BuiltByDevelopers() {
       justifyContent="center"
       height="100%"
       width="100%"
-      m={6}
-      p={6}
+      my={6}
+      py={6}
     >
       <MKBox
         sx={{ bgcolor: "#fff", position: "relative" }}

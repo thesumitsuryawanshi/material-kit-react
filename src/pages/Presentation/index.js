@@ -15,8 +15,8 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import TrendSVCGuySection from "pages/Presentation/sections/trendsvcGuySection";
 import MaxulichneyGuySection from "pages/Presentation/sections/MaxulichneyGuySection";
 import SellAnywhere from "pages/Presentation/sections/SellAnywhere";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "../Presentation/sections/Pages";
+import Seventeenblocks from "pages/Presentation/sections/Seventeenblocks";
+import SmileyGirl from "./sections/SmileyGirl";
 
 import PeopleInPark from "pages/Presentation/sections/PeopleInPark";
 import StartSelling from "pages/Presentation/sections/StartSelling";
@@ -43,10 +43,10 @@ import * as React from "react";
 function Presentation() {
   return (
     <>
-      <MKBox m={4} p={4}>
+      <MKBox>
         {/* <Grid component="img" src={GUMROAD} alt="GUMROAD" width={32} height={32} mr={2.5}></Grid> */}
 
-        <MKBox justifyContent="center">
+        {/* <MKBox justifyContent="center">
           <MKTypography
             variant="h1"
             align="center"
@@ -58,8 +58,13 @@ function Presentation() {
             sx={{ fontSize: "10rem" }} // Increase font size here
           >
             GUMROAD
-          </MKTypography>
-        </MKBox>
+          </MKTypography> */}
+
+        <img
+          src="https://assets-global.website-files.com/6171b265e5c8aa59b42c3472/618ea7afd990103829d614ff_gumroad-logo.svg"
+          width="100%"
+          height="100%"
+        ></img>
 
         <DefaultNavbar
           routes={routes}
@@ -89,9 +94,9 @@ function Presentation() {
         {/* sell anywhere */}
         <SellAnywhere />
         {/* 13. inspiration Tabs */}
-        <DesignBlocks />
+        <Seventeenblocks />
         {/* 14. the smiling girl */}
-        <Pages />
+        <SmileyGirl />
         {/* 15. doller count Section */}
         <BuiltByDevelopers />
         {/* 16. PeoplesInPark*/}

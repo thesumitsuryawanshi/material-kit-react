@@ -33,7 +33,7 @@ import windowClick from "../../../assets/MyImages/GumroadallSVG/BlocksSVGS/windo
 import PinkPaintBrush from "../../../assets/MyImages/GumroadallSVG/BlocksSVGS/PinkPaintBrush.svg";
 import GreenWritingPen from "../../../assets/MyImages/GumroadallSVG/BlocksSVGS/greenWritingPen.svg";
 
-function DesignBlocks() {
+function Seventeenblocks() {
   const sectionData = [
     {
       icon: BounceBall,
@@ -248,11 +248,11 @@ function DesignBlocks() {
       </Container>
 
       <React.Fragment style={{ textAlign: "center", justifyContent: "center" }}>
-        <Grid container spacing={3} style={{ textAlign: "center", justifyContent: "center" }}>
+        <Grid container style={{ textAlign: "center", justifyContent: "center" }}>
           {sections}
         </Grid>
       </React.Fragment>
     </MKBox>
   );
 }
-export default DesignBlocks;
+export default Seventeenblocks;

@@ -36,7 +36,7 @@ const handleStartSellingClick = () => {
   window.open("https://app.gumroad.com/signup", "_blank");
 };
 
-export default function Pages() {
+export default function SmileyGirl() {
   return (
     <Grid
       container
@@ -78,10 +78,10 @@ export default function Pages() {
       </Grid>
 
       <Grid item xs={6} textAlign="center">
-        <Grid item sx={{ position: "absolute", left: 1100, top: 5300, z: 1230 }}>
+        <Grid item sx={{ position: "absolute", left: 1100, top: 10610, z: 1230 }}>
           <DollerLogo />
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 1450, top: 5700, z: 1230 }}>
+        <Grid item sx={{ position: "absolute", left: 1450, top: 10990, z: 1230 }}>
           <HowTo />
         </Grid>
 
@@ -91,7 +91,6 @@ export default function Pages() {
           alt="Meta Icon"
           width={550}
           height={700}
-          mr={2.5}
         ></MKTypography>
 
         <MyBtnStartSelling
@@ -103,7 +102,7 @@ export default function Pages() {
             p: 1,
             position: "absolute",
             left: 1050,
-            top: 5830,
+            top: 11130,
             z: 1230,
           }}
         >
