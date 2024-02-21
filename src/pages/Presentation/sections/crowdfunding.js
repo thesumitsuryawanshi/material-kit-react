@@ -13,77 +13,14 @@ import maxpack from "../../../assets/MyImages/Crowdfunding Images/maxpack1.png";
 
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
+import DefaultNavBar from "examples/Navbars/DefaultNavbar/DefaultNavBar";
 
 function Crowdfunding() {
-  const linkProps = {
-    component: "a",
-    href: "https://www.gumroad.com",
-    target: "_blank",
-    style: {
-      textDecoration: "none",
-      color: "inherit", // Use the default color
-    },
-  };
-
   return (
     <>
-      <Box>
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={10}>
-            <Box
-              sx={{
-                display: "flex",
-                gap: "20px",
-                alignItems: "center",
-                flexGrow: 1,
-                paddingRight: "20px",
-              }}
-            >
-              {/* Updated Button components */}
-              <Button {...linkProps} padding="13px 45px" fontSize="18px" fontFamily="Mabry pro">
-                Features
-              </Button>
-              <Button {...linkProps} padding="13px 45px" fontSize="18px" fontFamily="Mabry pro">
-                Pricing
-              </Button>
-              <Button {...linkProps} padding="13px 45px" fontSize="18px" fontFamily="Mabry pro">
-                Blog
-              </Button>
-              <Button {...linkProps} padding="13px 45px" fontSize="18px" fontFamily="Mabry pro">
-                Discover
-              </Button>
-            </Box>
-          </Grid>
+      <DefaultNavBar></DefaultNavBar>
 
-          <Grid item xs={2} sx={{ display: "flex", justifyContent: "flex-end" }}>
-            {/* Updated Typography components */}
-            <Typography
-              {...linkProps}
-              padding="18px 35px"
-              fontSize="18px"
-              fontFamily="Mabry pro"
-              border="1px solid black"
-              marginRight={0} // Remove margin-right
-            >
-              Login
-            </Typography>
-            <Typography
-              {...linkProps}
-              fontFamily="Mabry pro"
-              padding="18px 30px"
-              border="1px solid black"
-              backgroundColor="#000"
-              fontSize="18px"
-              sx={{}}
-              color="#fff" // Change the color to white
-            >
-              Start Selling
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
-
-      <MKBox component="section" my={6} py={6}>
+      <MKBox compone nt="section" my={6} py={6}>
         <Container>
           <Grid
             container

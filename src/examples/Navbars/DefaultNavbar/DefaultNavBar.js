@@ -9,7 +9,6 @@ function DefaultNavBar() {
     target: "_blank",
     style: {
       textDecoration: "none",
-      color: "inherit", // Use the default color
     },
   };
 
@@ -50,6 +49,7 @@ function DefaultNavBar() {
             fontFamily="Mabry pro"
             border="1px solid black"
             marginRight={0} // Remove margin-right
+            color="#000" // Changed color to white
           >
             Login
           </Typography>
