@@ -79,7 +79,3 @@ function BuiltByDevelopers() {
 }
 
 export default BuiltByDevelopers;
-
-// <Grid item sx={{ position: "relative", right: -70, bottom: -70 }}>
-//   <TempIcon />
-// </Grid>

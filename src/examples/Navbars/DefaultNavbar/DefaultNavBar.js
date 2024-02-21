@@ -7,7 +7,6 @@ function DefaultNavBar() {
     component: "a",
     href: "https://www.gumroad.com",
     target: "_blank",
-    rel: "noreferrer",
     style: {
       textDecoration: "none",
       color: "inherit", // Use the default color
@@ -27,6 +26,7 @@ function DefaultNavBar() {
               paddingRight: "20px",
             }}
           >
+            {/* Updated Button components */}
             <Button {...linkProps} padding="13px 45px" fontSize="18px" fontFamily="Mabry pro">
               Features
             </Button>
@@ -42,6 +42,7 @@ function DefaultNavBar() {
           </Box>
         </Grid>
         <Grid item xs={2} sx={{ display: "flex", justifyContent: "flex-end" }}>
+          {/* Updated Typography components */}
           <Typography
             {...linkProps}
             padding="18px 35px"

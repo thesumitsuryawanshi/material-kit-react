@@ -1,4 +1,5 @@
 // @mui material components
+import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
@@ -31,7 +32,8 @@ import TopAnimationGuy from "pages/Presentation/sections/TopAnimationGuy";
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
-import footerRoutes from "footer.routes";
+
+// const Pages = ["crowdfunding"];
 // import GUMROAD from "../../assets/MyImages/GumroadallSVG/gumroad_text_two.svg";
 
 // Images
@@ -48,9 +50,7 @@ function Presentation() {
           width="100%"
           height="100%"
         ></img>
-
         <DefaultNavBar />
-
         <Firstdivisionofgumroad></Firstdivisionofgumroad>
         <TopAnimationGuy />
         {/* <GumroadPathway /> */}
@@ -78,15 +78,15 @@ function Presentation() {
         {/* 17. goto login page */}
         <StartSelling />
         {/* 18.intro section */}
-        <MKBox pt={6} pb={6}>
+        <MKBox p={6} m={6} border="1px solid black" borderRadius="12px">
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
                 <MKTypography variant="h1" fontWeight="bold" mb={0.5}>
-                  18.Thank you for your time and attention!
+                  Crowfunding
                 </MKTypography>
                 <MKTypography variant="body1" color="text">
-                  My Short intro : best of the best work is the only work you can Expect.
+                  A new way of gumroad where Creators or Customer can become investors{" "}
                 </MKTypography>
               </Grid>
               <Grid
@@ -97,34 +97,8 @@ function Presentation() {
                 mr={{ xs: 0, lg: "auto" }}
                 sx={{ textAlign: { xs: "center", lg: "right" } }}
               >
-                <MKSocialButton
-                  component="a"
-                  href="https://twitter.com/AmazingSummitS"
-                  target="_blank"
-                  color="twitter"
-                  sx={{ mr: 1 }}
-                >
-                  <i className="fab fa-twitter" />
-                  &nbsp; Connect with me here
-                </MKSocialButton>
-                <MKSocialButton
-                  component="a"
-                  href="https://github.com/thesumitsuryawanshi?tab=repositories"
-                  target="_blank"
-                  color="github"
-                  sx={{ mr: 1 }}
-                >
-                  <i className="fab fa-github" />
-                  &nbsp;GitHub Profile
-                </MKSocialButton>
-                <MKSocialButton
-                  component="a"
-                  href="https://www.linkedin.com/in/thesumitsuryawanshi/"
-                  target="_blank"
-                  color="Linkedin"
-                >
-                  <i className="fa fa-linkedin" />
-                  &nbsp; Linkedin
+                <MKSocialButton variant="contained" size="large">
+                  <Link to="/crowdfunding">What is Crowdfunding?</Link>
                 </MKSocialButton>
               </Grid>
             </Grid>
@@ -132,7 +106,7 @@ function Presentation() {
         </MKBox>
         {/* 19. footer */}
         <MKBox pt={6} px={1} mt={6}>
-          <DefaultFooter content={footerRoutes} />
+          <DefaultFooter />
         </MKBox>
       </MKBox>
     </>

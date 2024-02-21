@@ -69,12 +69,13 @@ function DefaultFooter() {
                   name="email"
                   id="email"
                   placeholder="Your Email Address"
+                  color="black"
                   required
                   style={{
                     borderRadius: "10px 0 0 10px",
                     border: "1px solid black",
                     fontStyle: "Bold",
-                    color: "white",
+                    color: "black",
                     bgcolor: "#000",
 
                     fontSize: 18,

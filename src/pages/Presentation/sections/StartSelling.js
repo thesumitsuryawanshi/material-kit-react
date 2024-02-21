@@ -101,7 +101,7 @@ const GridItemWrapper = styled(Grid)({
   textAlign: "center",
 });
 
-function Download() {
+function StartSelling() {
   const handleStartSellingClick = () => {
     // Open Gumroad website in a new tab when the button is clicked
     window.open("https://app.gumroad.com/signup", "_blank");
@@ -158,4 +158,4 @@ function Download() {
     </>
   );
 }
-export default Download;
+export default StartSelling;
