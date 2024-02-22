@@ -4,16 +4,26 @@ import MKBox from "components/MKBox";
 import DefaultFooter from "../../../examples/Footers/DefaultFooter";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import { Typography, Button, Box } from "@mui/material";
+import { Box } from "@mui/material";
+// import { Typography, Button, Box } from "@mui/material";
 
 import Container from "@mui/material/Container";
-import Card from "@mui/material/Card";
 
-import maxpack from "../../../assets/MyImages/Crowdfunding Images/maxpack1.png";
-
-import CardCover from "@mui/joy/CardCover";
-import CardContent from "@mui/joy/CardContent";
 import DefaultNavBar from "examples/Navbars/DefaultNavbar/DefaultNavBar";
+import BlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+
+import maxpack3 from "../../../assets/MyImages/Crowdfunding Images/maxpack3.png";
+import mshair1 from "../../../assets/MyImages/Crowdfunding Images/hair1.png";
+import mshair2 from "../../../assets/MyImages/Crowdfunding Images/hair2.png";
+import ancientHero1 from "../../../assets/MyImages/Crowdfunding Images/ancientHero1.png";
+import vitrivianMan from "../../../assets/MyImages/Crowdfunding Images/vitrivianMan.png";
+import pixelcoin1 from "../../../assets/MyImages/Crowdfunding Images/pixelcoin1.png";
+import bitcoin1 from "../../../assets/MyImages/Crowdfunding Images/bitcoin1.png";
+import MonkeyNFT from "../../../assets/MyImages/Crowdfunding Images/MonkeyNFT.png";
+import brainimg from "../../../assets/MyImages/Crowdfunding Images/brainimg.png";
+import eagleimg from "../../../assets/MyImages/Crowdfunding Images/eagleimg.png";
+import bitcoin2 from "../../../assets/MyImages/Crowdfunding Images/bitcoin2.png";
+import monkeynft2 from "../../../assets/MyImages/Crowdfunding Images/monkeynft2.png";
 
 function Crowdfunding() {
   return (
@@ -32,190 +42,446 @@ function Crowdfunding() {
           >
             <MKTypography
               variant="h1"
-              sx={{ fontFamily: "", fontSize: 60, fontStyle: "Bold", color: "black" }}
-              fontFamily="Mabry pro , Sans-serif "
+              color="black"
+              textAlign="center"
+              sx={{ fontFamily: "serif", fontSize: 140 }}
             >
               Crowdfunding
             </MKTypography>
+
             <MKTypography
-              variant="body1"
-              color="text"
-              sx={{
-                fontFamily: "Mabry pro , Sans-serif",
-                fontSize: 20,
-                fontStyle: "Bold",
-                color: "black",
-              }}
-              fontFamily="Mabry pro , Sans-serif"
+              variant="h1"
+              color="black"
+              m={5}
+              textAlign="center"
+              sx={{ fontFamily: "serif", fontSize: 27 }}
             >
-              Now,Invest in individuals and businesses and Grow with them as well.
+              creators can raise funds from their audience to support their projects or products.
+              <br></br>& With creators the Customers can also invest.
             </MKTypography>
           </Grid>
         </Container>
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <Grid display="flex" flexDirection="row" justifyContent={"space-between"}>
-          <MKBox display="flex" flexDirection="row" justifyContent={"space-between"}>
-            <Box
-              display="flex"
-              flexDirection="row"
-              justifyContent={"space-between"}
-              sx={{
-                perspective: "1000px",
-                transition: "transform 0.4s",
-                "& > div, & > div > div": {
-                  transition: "inherit",
-                },
-                "&:hover": {
-                  "& > div": {
-                    transform: "rotateY(30deg)",
-                    "& > div:nth-child(2)": {
-                      transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                    },
-                    "& > div:nth-child(3)": {
-                      transform: "translate3d(45px, 50px, 40px)",
+          <MKBox display="flex" flexDirection="Column" justifyContent={"space-between"}>
+            <Box display="flex" flexDirection="row" justifyContent={"space-between"}>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
                     },
                   },
-                },
-              }}
-            >
-              <Card
-                variant="outlined"
-                sx={{
-                  minHeight: "540px",
-                  width: 340,
-                  backgroundColor: "#fff",
-                  borderColor: "#f00",
-                  p: 4,
-                  m: 4,
                 }}
               >
-                <Typography level="h2" fontSize="lg" textColor="#000">
-                  Beardo Oil
-                </Typography>
-                <CardCover
-                  sx={{
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
-                    border: "1px solid",
-                    borderColor: "#f00",
-                    backdropFilter: "blur(1px)",
-                  }}
-                >
-                  <img
-                    src={maxpack}
-                    srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
-                    loading="lazy"
-                    alt=""
-                    height="100%"
-                    width="100%"
-                    border="2px solid black"
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={vitrivianMan}
+                    title="Material Kit"
+                    description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "More about us",
+                    }}
                   />
-                </CardCover>
-
-                <CardContent
-                  sx={{
-                    alignItems: "self-end",
-                    justifyContent: "flex-end",
-                    background: "linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3))",
-                    border: "1px solid",
-                    borderColor: "#000",
-                    backdropFilter: "blur(1px)",
-                    borderRadius: " 4px ",
-                  }}
-                >
-                  <Typography level="h2" fontSize="xl" sx={{ m: 0.5 }} color="#fff">
-                    $50,000/- raised
-                  </Typography>
-
-                  <Typography
-                    level="title-lg"
-                    textAlign="center"
-                    sx={{ m: 0.5 }}
-                    color="#fff"
-                    m={2}
-                  >
-                    Number of Investors : 10
-                  </Typography>
-                  <Button level="body-sm" sx={{ m: 1 }} textColor="#ffffff" textAlign="center">
-                    See More
-                  </Button>
-                </CardContent>
-              </Card>
-              <MKBox></MKBox>
-              <Card
-                variant="outlined"
+                </Grid>
+              </MKBox>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
                 sx={{
-                  minHeight: "540px",
-                  width: 340,
-                  backgroundColor: "#fff",
-                  borderColor: "#f00",
-                  p: 4,
-                  m: 4,
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
                 }}
               >
-                <Typography level="h2" fontSize="lg" textColor="#000">
-                  Beardo Oil
-                </Typography>
-                <CardCover
-                  sx={{
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
-                    border: "1px solid",
-                    borderColor: "#f00",
-                    backdropFilter: "blur(1px)",
-                  }}
-                >
-                  <img
-                    src={maxpack}
-                    srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
-                    loading="lazy"
-                    alt=""
-                    height="100%"
-                    width="100%"
-                    border="2px solid black"
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={mshair1}
+                    title="Material Kit"
+                    description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "More about us",
+                    }}
                   />
-                </CardCover>
+                </Grid>
+              </MKBox>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={mshair2}
+                    title="Material Kit"
+                    description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "More about us",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={ancientHero1}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book Building Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
+            </Box>
+            <Box display="flex" flexDirection="row" justifyContent={"space-between"}>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={monkeynft2}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
 
-                <CardContent
-                  sx={{
-                    alignItems: "self-end",
-                    justifyContent: "flex-end",
-                    background: "linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3))",
-                    border: "1px solid",
-                    borderColor: "#000",
-                    backdropFilter: "blur(1px)",
-                    borderRadius: " 4px ",
-                  }}
-                >
-                  <Typography level="h2" fontSize="xl" sx={{ m: 0.5 }} color="#fff">
-                    $50,000/- raised
-                  </Typography>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={bitcoin1}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
 
-                  <Typography
-                    level="title-lg"
-                    textAlign="center"
-                    sx={{ m: 0.5 }}
-                    color="#fff"
-                    m={2}
-                  >
-                    Number of Investors : 10
-                  </Typography>
-                  <Button level="body-sm" sx={{ m: 1 }} textColor="#ffffff" textAlign="center">
-                    See More
-                  </Button>
-                </CardContent>
-              </Card>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={MonkeyNFT}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
 
-              <Grid sx={{ alignItems: "center" }}></Grid>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={maxpack3}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
+            </Box>
+
+            <Box display="flex" flexDirection="row" justifyContent={"space-between"}>
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={pixelcoin1}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
+
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={eagleimg}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
+
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={brainimg}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
+
+              <MKBox
+                pt={6}
+                pb={3}
+                px={3}
+                sx={{
+                  transition: "transform 0.4s",
+                  "& > div, & > div > div": {
+                    transition: "inherit",
+                  },
+                  "&:hover": {
+                    "& > div": {
+                      transform: "rotateY(30deg)",
+                      "& > div:nth-child(2)": {
+                        transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                      },
+                    },
+                  },
+                }}
+              >
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <BlogCard
+                    image={bitcoin2}
+                    title="Max Pack"
+                    description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </Grid>
+              </MKBox>
             </Box>
           </MKBox>
         </Grid>
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
       </MKBox>
 
-      <MKBox>
-        <MKTypography>this is Crowfunding</MKTypography>
+      <MKBox textAlign="center">
+        <MKTypography variant="h1">FAQ</MKTypography>
         <Link to="/">Go back to home</Link>
+
         {/* Your crowdfunding page content */}
         <MKBox pt={6} px={1} mt={6}>
           <DefaultFooter />
