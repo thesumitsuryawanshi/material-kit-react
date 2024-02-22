@@ -112,8 +112,7 @@ function StartSelling() {
         <MKBox
           variant="gradient"
           position="relative"
-          borderRadius="xl"
-          sx={{ overflow: "hidden", bgcolor: "#fc72e0", p: 1 }}
+          sx={{ overflow: "hidden", bgcolor: "#fc72e0" }}
         >
           <MKBox
             // component="img"

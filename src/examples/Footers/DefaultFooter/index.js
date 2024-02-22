@@ -33,12 +33,9 @@ function DefaultFooter() {
     <Card
       sx={{
         display: "flex",
-
         flexDirection: "row",
-        borderRadius: "xl",
         bgcolor: "#000",
         p: 6,
-        m: 2,
       }}
       spacing={2}
     >
@@ -93,7 +90,7 @@ function DefaultFooter() {
                 style={{
                   backgroundColor: "#fc72e0",
                   borderRadius: "0 10px 10px 0",
-                }} // Set border radius for the button
+                }} // Set border  us for the button
                 size="lg"
                 m={6}
                 p={6}
