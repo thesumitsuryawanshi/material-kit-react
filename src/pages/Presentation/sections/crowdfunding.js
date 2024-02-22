@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import MKTypography from "components/MKTypography";
-import MKBox from "components/MKBox";
 import DefaultFooter from "../../../examples/Footers/DefaultFooter";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import { Box, Typography } from "@mui/material";
 import { Collapse } from "@mui/material";
+import MKBox from "components/MKBox";
 
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -14,6 +14,7 @@ import IconButton from "@mui/material/IconButton"; // import { Typography, Butto
 
 import AddIcon from "@mui/icons-material/Add";
 
+import StartSelling from "pages/Presentation/sections/StartSelling";
 import Container from "@mui/material/Container";
 
 import DefaultNavBar from "examples/Navbars/DefaultNavbar/DefaultNavBar";
@@ -32,6 +33,11 @@ import eagleimg from "../../../assets/MyImages/Crowdfunding Images/eagleimg.png"
 import bitcoin2 from "../../../assets/MyImages/Crowdfunding Images/bitcoin2.png";
 import monkeynft2 from "../../../assets/MyImages/Crowdfunding Images/monkeynft2.png";
 
+import Coin1 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin1.svg";
+import Coin2 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin2.svg";
+import Coin4 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin4.svg";
+import Coin5 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin5.svg";
+
 function Crowdfunding() {
   const [open, setOpen] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState(null);
@@ -44,37 +50,59 @@ function Crowdfunding() {
   return (
     <>
       <DefaultNavBar></DefaultNavBar>
-      <MKBox compone nt="section" my={6} py={6}>
-        <Container>
-          <Grid
-            container
-            item
-            xs={12}
-            flexDirection="column"
-            alignItems="center"
-            sx={{ textAlign: "center", m: 6, mx: "auto", px: 5 }}
-          >
-            <MKTypography
-              variant="h1"
-              color="black"
-              textAlign="center"
-              sx={{ fontFamily: "san-serif", fontSize: 140 }}
+      <MKBox bgcolor="#FEC901">
+        <MKBox bgcolor="#FEC901">
+          <MKBox bgcolor="#FEC901">
+            <Grid
+              bgcolor="#FEC901"
+              container
+              m={6}
+              item
+              xs={12}
+              flexDirection="column"
+              alignItems="center"
+              sx={{ textAlign: "center", m: 6, mx: "auto", px: 5 }}
             >
-              Crowdfunding
-            </MKTypography>
+              <MKTypography
+                variant="h1"
+                color="black"
+                textAlign="center"
+                sx={{ fontFamily: "san-serif", fontSize: 140 }}
+              >
+                Crowdfunding
+              </MKTypography>
 
-            <MKTypography
-              variant="h1"
-              color="black"
-              m={5}
-              textAlign="center"
-              sx={{ fontFamily: "serif", fontSize: 27 }}
-            >
-              Creators can raise funds from their audience to support their projects or products.
-              <br></br>& <br></br> With creators the Customers can also invest.
-            </MKTypography>
+              <MKTypography
+                variant="h1"
+                color="black"
+                m={5}
+                textAlign="center"
+                sx={{ fontFamily: "serif", fontSize: 27 }}
+              >
+                Creators can raise funds from their audience to support their projects or products.
+                <br></br>& <br></br> With creators the Customers can also invest.
+              </MKTypography>
+            </Grid>
+          </MKBox>
+        </MKBox>
+
+        <Grid item xs={6} textAlign="center">
+          <Grid item sx={{ position: "absolute", left: 150, top: 350, z: 1230 }}>
+            <Coin5 />
           </Grid>
-        </Container>
+          <Grid item sx={{ position: "absolute", left: 850, top: 490, z: 1230 }}>
+            <Coin4 />
+          </Grid>
+          <Grid item sx={{ position: "absolute", left: 1550, top: 190, z: 1230 }}>
+            <Coin5 />
+          </Grid>
+          <Grid item sx={{ position: "absolute", left: 1550, top: 390, z: 1230 }}>
+            <Coin2 />
+          </Grid>
+          <Grid item sx={{ position: "absolute", left: 250, top: 190, z: 1230 }}>
+            <Coin1 />
+          </Grid>
+        </Grid>
 
         <Grid display="flex" flexDirection="row" justifyContent={"space-between"}>
           <MKBox display="flex" flexDirection="Column" justifyContent={"space-between"}>
@@ -492,21 +520,15 @@ function Crowdfunding() {
       </MKBox>
       <Container
         textAlign="center"
-        fontFamily="san-serif"
+        fontFamily="sans-serif"
         border="1px solid white"
         borderRadius="12px"
-        sx={{ fontFamily: "sans-serif", margin: 3, padding: 3 }}
+        sx={{ margin: 3, padding: 3 }}
       >
-        <Typography variant="h1" fontFamily="san-serif" textAlign="center" sx={{ fontSize: 50 }}>
+        <Typography variant="h1" textAlign="center" sx={{ fontSize: 50 }}>
           FAQ
         </Typography>
-        <List
-          border="1px solid white"
-          fontFamily="san-serif"
-          borderRadius="12px"
-          textAlign="center"
-          sx={{ width: "100%", bgcolor: "background.paper", margin: 6, padding: 3 }}
-        >
+        <List sx={{ width: "100%", bgcolor: "background.paper", margin: 6, padding: 3 }}>
           {[
             {
               question: "How does Gumroad's crowdfunding program work?",
@@ -540,34 +562,39 @@ function Crowdfunding() {
           ].map((item, index) => (
             <React.Fragment key={index}>
               <ListItem
-                fontFamily="san-serif"
                 button
-                border="1px solid white"
-                borderRadius="12px"
                 onClick={() => handleClick(index)}
                 disableGutters
                 sx={{ display: "flex", justifyContent: "space-between", margin: 1, padding: 1 }}
               >
-                <ListItemText fontFamily="san-serif" primary={item.question} />
-                <IconButton
-                  aria-label="expand"
-                  fontFamily="san-serif"
-                  onClick={() => handleClick(index)}
-                >
+                <ListItemText
+                  primary={
+                    <Typography variant="body1" fontFamily="sans-serif">
+                      {item.question}
+                    </Typography>
+                  }
+                />
+                <IconButton aria-label="expand" onClick={() => handleClick(index)}>
                   <AddIcon />
                 </IconButton>
               </ListItem>
               <Collapse in={open && index === selectedItem} timeout="auto" unmountOnExit>
-                <ListItemText alignItems="center" fontFamily="san-serif" primary={item.answer} />
+                <ListItemText
+                  primary={
+                    <Typography variant="body2" fontFamily="sans-serif">
+                      {item.answer}
+                    </Typography>
+                  }
+                />
               </Collapse>
             </React.Fragment>
           ))}
         </List>
-      </Container>{" "}
-      <Link to="/">Home ←</Link>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter />
-      </MKBox>
+      </Container>
+
+      <StartSelling />
+      {/* <Link to="/"> Home ←</Link> */}
+      <DefaultFooter />
     </>
   );
 }
