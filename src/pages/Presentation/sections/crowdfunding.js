@@ -4,8 +4,15 @@ import MKBox from "components/MKBox";
 import DefaultFooter from "../../../examples/Footers/DefaultFooter";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import { Box } from "@mui/material";
-// import { Typography, Button, Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { Collapse } from "@mui/material";
+
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import IconButton from "@mui/material/IconButton"; // import { Typography, Button, Box } from "@mui/material";
+
+import AddIcon from "@mui/icons-material/Add";
 
 import Container from "@mui/material/Container";
 
@@ -26,10 +33,17 @@ import bitcoin2 from "../../../assets/MyImages/Crowdfunding Images/bitcoin2.png"
 import monkeynft2 from "../../../assets/MyImages/Crowdfunding Images/monkeynft2.png";
 
 function Crowdfunding() {
+  const [open, setOpen] = React.useState(false);
+  const [selectedItem, setSelectedItem] = React.useState(null);
+
+  const handleClick = (index) => {
+    setOpen(index === selectedItem ? !open : true);
+    setSelectedItem(index);
+  };
+
   return (
     <>
       <DefaultNavBar></DefaultNavBar>
-
       <MKBox compone nt="section" my={6} py={6}>
         <Container>
           <Grid
@@ -44,7 +58,7 @@ function Crowdfunding() {
               variant="h1"
               color="black"
               textAlign="center"
-              sx={{ fontFamily: "serif", fontSize: 140 }}
+              sx={{ fontFamily: "san-serif", fontSize: 140 }}
             >
               Crowdfunding
             </MKTypography>
@@ -56,12 +70,12 @@ function Crowdfunding() {
               textAlign="center"
               sx={{ fontFamily: "serif", fontSize: 27 }}
             >
-              creators can raise funds from their audience to support their projects or products.
-              <br></br>& With creators the Customers can also invest.
+              Creators can raise funds from their audience to support their projects or products.
+              <br></br>& <br></br> With creators the Customers can also invest.
             </MKTypography>
           </Grid>
         </Container>
-        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
         <Grid display="flex" flexDirection="row" justifyContent={"space-between"}>
           <MKBox display="flex" flexDirection="Column" justifyContent={"space-between"}>
             <Box display="flex" flexDirection="row" justifyContent={"space-between"}>
@@ -475,17 +489,84 @@ function Crowdfunding() {
             </Box>
           </MKBox>
         </Grid>
-        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
       </MKBox>
-
-      <MKBox textAlign="center">
-        <MKTypography variant="h1">FAQ</MKTypography>
-        <Link to="/">Go back to home</Link>
-
-        {/* Your crowdfunding page content */}
-        <MKBox pt={6} px={1} mt={6}>
-          <DefaultFooter />
-        </MKBox>
+      <Container
+        textAlign="center"
+        fontFamily="san-serif"
+        border="1px solid white"
+        borderRadius="12px"
+        sx={{ fontFamily: "sans-serif", margin: 3, padding: 3 }}
+      >
+        <Typography variant="h1" fontFamily="san-serif" textAlign="center" sx={{ fontSize: 50 }}>
+          FAQ
+        </Typography>
+        <List
+          border="1px solid white"
+          fontFamily="san-serif"
+          borderRadius="12px"
+          textAlign="center"
+          sx={{ width: "100%", bgcolor: "background.paper", margin: 6, padding: 3 }}
+        >
+          {[
+            {
+              question: "How does Gumroad's crowdfunding program work?",
+              answer:
+                "Gumroad's crowdfunding program allows customers to invest in creators' assets like books, music, software, and courses, helping them grow their creative projects.",
+            },
+            {
+              question:
+                "What benefits do customers get from participating in Gumroad's crowdfunding program?",
+              answer:
+                "Customers can support creators they believe in, access exclusive content, and potentially earn returns on their investment as the creators' assets grow in value.",
+            },
+            {
+              question:
+                "Are there any risks involved for customers in Gumroad's crowdfunding program?",
+              answer:
+                "Yes, investing in crowdfunding projects carries inherent risks, including the possibility of not receiving the expected returns if the creator's project does not succeed.",
+            },
+            {
+              question:
+                "How can customers determine which projects to invest in on Gumroad's crowdfunding platform?",
+              answer:
+                "Customers should research the creator's track record, project details, and goals before investing to ensure alignment with their interests and risk tolerance.",
+            },
+            {
+              question:
+                "What happens if a crowdfunding project on Gumroad does not reach its funding goal?",
+              answer:
+                "If a project does not reach its funding goal, customers are typically refunded their investment, and the project may not proceed as planned.",
+            },
+          ].map((item, index) => (
+            <React.Fragment key={index}>
+              <ListItem
+                fontFamily="san-serif"
+                button
+                border="1px solid white"
+                borderRadius="12px"
+                onClick={() => handleClick(index)}
+                disableGutters
+                sx={{ display: "flex", justifyContent: "space-between", margin: 1, padding: 1 }}
+              >
+                <ListItemText fontFamily="san-serif" primary={item.question} />
+                <IconButton
+                  aria-label="expand"
+                  fontFamily="san-serif"
+                  onClick={() => handleClick(index)}
+                >
+                  <AddIcon />
+                </IconButton>
+              </ListItem>
+              <Collapse in={open && index === selectedItem} timeout="auto" unmountOnExit>
+                <ListItemText alignItems="center" fontFamily="san-serif" primary={item.answer} />
+              </Collapse>
+            </React.Fragment>
+          ))}
+        </List>
+      </Container>{" "}
+      <Link to="/">Home ←</Link>
+      <MKBox pt={6} px={1} mt={6}>
+        <DefaultFooter />
       </MKBox>
     </>
   );
