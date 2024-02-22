@@ -6,6 +6,10 @@ import Grid from "@mui/material/Grid";
 import { Box, Typography } from "@mui/material";
 import { Collapse } from "@mui/material";
 import MKBox from "components/MKBox";
+<<<<<<< HEAD
+=======
+
+>>>>>>> b174800c26c336a6ce0209481388c6440255494e
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -37,9 +41,12 @@ import Coin2 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-e
 import Coin4 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin4.svg";
 import Coin5 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin5.svg";
 
+<<<<<<< HEAD
 import RemoveIcon from "@mui/icons-material/Remove";
 import Divider from "@mui/material/Divider";
 
+=======
+>>>>>>> b174800c26c336a6ce0209481388c6440255494e
 function Crowdfunding() {
   const [open, setOpen] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState(null);
@@ -527,6 +534,7 @@ function Crowdfunding() {
         borderRadius="12px"
         sx={{ margin: 3, padding: 3 }}
       >
+<<<<<<< HEAD
         <Typography variant="h1" textAlign="center" fontFamily="sans-serif" sx={{ fontSize: 45 }}>
           Frequently asked questions
           <Typography>
@@ -537,6 +545,11 @@ function Crowdfunding() {
           </Typography>
         </Typography>
 
+=======
+        <Typography variant="h1" textAlign="center" sx={{ fontSize: 50 }}>
+          FAQ
+        </Typography>
+>>>>>>> b174800c26c336a6ce0209481388c6440255494e
         <List sx={{ width: "100%", bgcolor: "background.paper", margin: 6, padding: 3 }}>
           {[
             {
@@ -578,14 +591,22 @@ function Crowdfunding() {
                   }
                 />
                 <IconButton aria-label="expand" onClick={() => handleClick(index)}>
+<<<<<<< HEAD
                   {open && index === selectedItem ? <RemoveIcon /> : <AddIcon />}
+=======
+                  <AddIcon />
+>>>>>>> b174800c26c336a6ce0209481388c6440255494e
                 </IconButton>
               </ListItem>
 
               <Collapse in={open && index === selectedItem} timeout="auto" unmountOnExit>
                 <ListItemText
                   primary={
+<<<<<<< HEAD
                     <Typography variant="body2" fontFamily="sans-serif" margin="3">
+=======
+                    <Typography variant="body2" fontFamily="sans-serif">
+>>>>>>> b174800c26c336a6ce0209481388c6440255494e
                       {item.answer}
                     </Typography>
                   }
@@ -596,6 +617,10 @@ function Crowdfunding() {
           ))}
         </List>
       </Container>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b174800c26c336a6ce0209481388c6440255494e
       <StartSelling />
       {/* <Link to="/"> Home ←</Link> */}
       <DefaultFooter />
