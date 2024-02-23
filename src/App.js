@@ -6,6 +6,7 @@ import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
 import Crowdfunding from "../src/pages/Presentation/sections/crowdfunding";
 import routes from "routes";
+import Stripe from "stripe";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
         <Route path="/crowdfunding" element={<Crowdfunding />} />
+        <Route path="/stripe" element={<Stripe />} />
       </Routes>
     </ThemeProvider>
   );

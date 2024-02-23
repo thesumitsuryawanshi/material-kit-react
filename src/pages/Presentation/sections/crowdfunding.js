@@ -403,8 +403,16 @@ Enjoy 12 natural media brushes and 5 bonus smudge brushes."
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={pixelcoin1}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="NFTs for Artists | The ultimate guide to sell your ART as an NFT"
+                  description=" This course covers the basics of NFTs:
+
+How to create, buy and sell NFTs
+
+NFT culture and community
+
+NFT History
+
+How to mint NFTs"
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -437,8 +445,9 @@ Enjoy 12 natural media brushes and 5 bonus smudge brushes."
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={eagleimg}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="Eagle Eye Thinkers"
+                  description="Third Eye Is a comedic slice-of-life series about friendship, growth, and observing the genuine and unique parts of our favorite 
+                  things.also demons. "
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -471,8 +480,8 @@ Enjoy 12 natural media brushes and 5 bonus smudge brushes."
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={brainimg}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="Become Unstoppable- A System to Unleash your Inner Beast"
+                  description="BYou will rewire your Mind and Finally build those killer Habits to optimize your Existence on Every Level -- physically,   emotionally, and financially."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -505,8 +514,9 @@ Enjoy 12 natural media brushes and 5 bonus smudge brushes."
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={bitcoin2}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="Crypto Bitcoins Guide - The Beginner's Guide to Cryptocurrency
+"
+                  description="Crypto Bitcoins Guide : Many individuals believe that bitcoins represent a replacement era of digital currency and often get confused with them."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
