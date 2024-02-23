@@ -122,13 +122,13 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={vitrivianMan}
-                  title="Material Kit"
-                  description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
+                  title="Life Trining program - Project by AJAC "
+                  description="The AJAC Life Training log is a daily accountability journal that you can use, based upon building and enforcing the following daily habits."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
                     color: "info",
-                    label: "More about us",
+                    label: "Starting Investment : $100/-",
                   }}
                 />
               </Grid>
@@ -155,13 +155,13 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={mshair1}
-                  title="Material Kit"
-                  description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
+                  title="Vol 1 Clip Studio Paint, Brushes By. Vegalia. "
+                  description="Vol 1 Clip Studio Paint, Photoshop & Fresco Curl, Coil, and Wave Brushes Brushes By. Vegalia. Things include  Paint, Photoshop Deluxe items."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
                     color: "info",
-                    label: "More about us",
+                    label: "Starting Investment : $100/-",
                   }}
                 />
               </Grid>
@@ -188,13 +188,13 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={mshair2}
-                  title="Material Kit"
-                  description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
+                  title="Vol 2   Clip Studio Paint, Brushes By. Vegalia."
+                  description="Vol 2 Clip Studio Paint, Photoshop & Fresco Curl, Coil, and Wave Brushes Brushes By. Vegalia. Things include  Paint, Photoshop Deluxe items."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
                     color: "info",
-                    label: "More about us",
+                    label: "Starting Investment : $100/-",
                   }}
                 />
               </Grid>
@@ -221,8 +221,10 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={ancientHero1}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book Building Impressive Book on Mission Station"
+                  title="Ancient Athletics - Alexander J.A Cortes"
+                  description="Train Like the Ancients #1: Sunlight and its Role in Health 
+Heal Like the Ancients #2: METH and Light vs RICE 
+ Ancients Training #4 Spiritual Hygiene "
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -233,6 +235,7 @@ function Crowdfunding() {
               </Grid>
             </MKBox>
           </Box>
+
           <Box display="flex" flexDirection="row" justifyContent={"space-between"}>
             <MKBox
               pt={6}
@@ -256,8 +259,9 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={monkeynft2}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="Hoodie Monkey el Patron NFT"
+                  description="Hoodie Monkey drinking wine. 8k/3d image for NFT ready!The patron 
+                  like do drink & smoke on some woods during his breaks! Because "
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -290,8 +294,8 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={bitcoin1}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="ChatGPT Crypto Trading Mastery"
+                  description="Master crypto will help with using ChatGPT as a FREE trading assistant. The basics of  Crypto trading strategies, how to create NFT's using AI."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -324,8 +328,12 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={MonkeyNFT}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="How to NFT: Ebook by @TheMon3yMom"
+                  description="his course covers the basics of NFTs:
+How to create, buy and sell NFTs
+NFT culture communit Minting NFTs
+How to create a wallet
+"
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
@@ -358,8 +366,9 @@ function Crowdfunding() {
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
                 <BlogCard
                   image={maxpack3}
-                  title="Max Pack"
-                  description="Building Impressive Book on Mission Station Building Impressive Book on Mission StationBuilding Impressive Book on Mission Station"
+                  title="The Painter's MaxPack - Brushes for Procreate"
+                  description="The Painter's MaxPack is a set of brushes compatible with Procreate 4+  
+Enjoy 12 natural media brushes and 5 bonus smudge brushes."
                   action={{
                     type: "internal",
                     route: "/sections/page-sections/general-cards",
