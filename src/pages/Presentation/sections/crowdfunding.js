@@ -53,8 +53,8 @@ function Crowdfunding() {
     <>
       <DefaultNavBar></DefaultNavBar>
       <Grid
-        bgcolor="#FEC901"
         container
+        bgcolor="#FEC901"
         xs={12}
         flexDirection="column"
         alignItems="center"
