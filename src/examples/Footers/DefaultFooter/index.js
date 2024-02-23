@@ -30,7 +30,7 @@ function DefaultFooter() {
     setOpen(false);
   };
   return (
-    <Card
+    <Grid
       sx={{
         display: "flex",
         flexDirection: "row",
@@ -229,7 +229,7 @@ function DefaultFooter() {
           </MKTypography>
         </Card>
       </Grid>
-    </Card>
+    </Grid>
   );
 }
 
