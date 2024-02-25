@@ -1,4 +1,4 @@
-const { override, addWebpackModuleRule } = require("customize-cra");
+const { override, addWebpackModuleRule, addBabelPlugin } = require("customize-cra");
 
 module.exports = override(
   addWebpackModuleRule({
@@ -10,10 +10,10 @@ module.exports = override(
           svgoConfig: {
             plugins: [{ name: "preset-default", params: { overrides: { removeViewBox: false } } }],
           },
-          // Add the plugin name
           svgo: true,
         },
       },
     ],
-  })
+  }),
+  addBabelPlugin(["@svgr/babel-plugin-react-svg"])
 );

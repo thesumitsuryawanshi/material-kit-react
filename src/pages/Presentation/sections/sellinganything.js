@@ -2,8 +2,15 @@ import Grid from "@mui/material/Grid"; // Import Grid component
 import PayMonthlySVG from "../../../assets/MyImages/GumroadallSVG/pay monthly.svg";
 
 import MKTypography from "components/MKTypography";
+import { useScrollTrigger } from "@mui/material";
 
 function SellAnything() {
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 40, // Adjust threshold as needed
+  });
+
   return (
     <Grid
       container
@@ -42,7 +49,16 @@ function SellAnything() {
             color: "#23A195",
           }}
         >
-          <PayMonthlySVG height="100%" weight="100% " />
+          <PayMonthlySVG
+            height="100%"
+            weight="100% "
+            sx={{
+              position: "absolute",
+              zIndex: 1230,
+              transition: "transform 0.1s ease",
+              transform: trigger ? "translateY(-40px)" : "translateY(10)",
+            }}
+          />
         </MKTypography>
       </Grid>
 

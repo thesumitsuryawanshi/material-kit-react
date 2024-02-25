@@ -5,7 +5,7 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 // import { Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
-import { Collapse } from "@mui/material";
+import { Collapse, useScrollTrigger } from "@mui/material";
 import MKBox from "components/MKBox";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -32,10 +32,11 @@ import eagleimg from "../../../assets/MyImages/Crowdfunding Images/eagleimg.png"
 import bitcoin2 from "../../../assets/MyImages/Crowdfunding Images/bitcoin2.png";
 import monkeynft2 from "../../../assets/MyImages/Crowdfunding Images/monkeynft2.png";
 
-import Coin1 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin1.svg";
-import Coin2 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin2.svg";
-import Coin4 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin4.svg";
-import Coin5 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/coin5.svg";
+import Coin1 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/VCoin1.png";
+import Coin2 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/VCoin2.png";
+import Coin3 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/Vcoin3.png";
+import Coin4 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/VCoin4.png";
+import Coin5 from "../../../assets/MyImages/GumroadallSVG/Crowdfunding SVG/svg-export/VCoin5.png";
 
 import RemoveIcon from "@mui/icons-material/Remove";
 import Divider from "@mui/material/Divider";
@@ -43,6 +44,12 @@ import Divider from "@mui/material/Divider";
 function Crowdfunding() {
   const [open, setOpen] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState(null);
+
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 40, // Adjust threshold as needed
+  });
 
   const handleClick = (index) => {
     setOpen(index === selectedItem ? !open : true);
@@ -120,20 +127,83 @@ function Crowdfunding() {
         </MKTypography>
       </Grid>
       <Grid item xs={6} textAlign="center">
-        <Grid item sx={{ position: "absolute", left: 150, top: 350, z: 1230 }}>
-          <Coin5 />
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 150,
+            top: 350,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={Coin5}></img>
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 850, top: 490, z: 1230 }}>
-          <Coin4 />
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 850,
+            top: 490,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={Coin4}></img>
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 1550, top: 190, z: 1230 }}>
-          <Coin5 />
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1550,
+            top: 190,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={Coin5}></img>
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 1550, top: 390, z: 1230 }}>
-          <Coin2 />
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1550,
+            top: 390,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={Coin2}></img>
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 250, top: 190, z: 1230 }}>
-          <Coin1 />
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1400,
+            top: 20,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={Coin3}></img>
+        </Grid>
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 250,
+            top: 190,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={Coin1}></img>
         </Grid>
       </Grid>
       <Grid display="flex" flexDirection="row" justifyContent={"space-between"}>

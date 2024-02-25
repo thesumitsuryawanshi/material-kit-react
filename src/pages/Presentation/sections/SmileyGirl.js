@@ -6,6 +6,7 @@ import MKTypography from "components/MKTypography";
 import SmilingGirl from "../../../assets/MyImages/SmilingGirl.png";
 import DollerLogo from "../../../assets/MyImages/GumroadallSVG/doller.svg";
 import HowTo from "../../../assets/MyImages/GumroadallSVG/howTo.svg";
+import { useScrollTrigger } from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -22,9 +23,9 @@ const MyBtnStartSelling = styled("button")({
   transition: "all 0.3s ease 0s",
   cursor: "pointer",
   border: "3px solid #000",
-  display: "flex", // Use Flexbox
-  alignItems: "center", // Center items vertically
-  justifyContent: "center", // Center items horizontally
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   textAlign: "center",
   "&:hover": {
     transform: "translateY(-9px) translateX(-9px)",
@@ -36,6 +37,12 @@ const handleStartSellingClick = () => {
 };
 
 export default function SmileyGirl() {
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 40, // Adjust threshold as needed
+  });
+
   return (
     <Grid
       container
@@ -77,10 +84,30 @@ export default function SmileyGirl() {
       </Grid>
 
       <Grid item xs={6} textAlign="center">
-        <Grid item sx={{ position: "absolute", left: 1100, top: 10610, z: 1230 }}>
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1100,
+            top: 10610,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-10px)" : "translateY(0)",
+          }}
+        >
           <DollerLogo />
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 1550, top: 10990, z: 1230 }}>
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1550,
+            top: 10990,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-10px)" : "translateY(0)",
+          }}
+        >
           <HowTo />
         </Grid>
 
@@ -102,7 +129,9 @@ export default function SmileyGirl() {
             position: "absolute",
             left: 1050,
             top: 10990,
-            z: 1230,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-10px)" : "translateY(0)",
           }}
         >
           <svg

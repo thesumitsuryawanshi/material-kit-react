@@ -3,8 +3,11 @@ import Vegalia from "../../../assets/MyImages/vegalia.png";
 import { styled } from "@mui/system";
 import GreenWritingPen from "../../../assets/MyImages/GumroadallSVG/BlocksSVGS/paintbrush.svg";
 import Threecoins from "../../../assets/MyImages/GumroadallSVG/3gcoins.svg";
+import { useScrollTrigger } from "@mui/material";
+
 // import Button from "@mui/material/Button";
 // mycomponents
+
 const ButtonContainer = styled("div")({
   display: "flex",
   alignItems: "center",
@@ -88,6 +91,12 @@ function firstdivisionofgumroad() {
     // Open Gumroad website in a new tab when the button is clicked
     window.open("https://byvegalia.gumroad.com/?recommended_by=search", "_blank");
   };
+
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 40, // Adjust threshold as needed
+  });
 
   return (
     <Grid>
@@ -215,6 +224,8 @@ function firstdivisionofgumroad() {
                 "&:hover": {
                   transform: "translateY(-9px) translateX(-9px)",
                 },
+                transition: "transform 0.1s ease",
+                transform: trigger ? "translateY(-40px)" : "translateY(10)",
               }}
               color="black"
               onClick={VengaliaClick}
@@ -235,17 +246,42 @@ function firstdivisionofgumroad() {
               </svg>
               &nbsp; &nbsp; Vegalia
             </VegaliaBTN>
-            <Grid sx={{ position: "absolute", left: 1560, top: 390, z: 30 }}>
+            <Grid
+              sx={{
+                position: "absolute",
+                left: 1560,
+                top: 390,
+                z: 30,
+                transition: "transform 0.1s ease",
+                transform: trigger ? "translateY(-40px)" : "translateY(10)",
+              }}
+            >
               <GreenWritingPen />
             </Grid>
-            <Grid sx={{ position: "absolute", left: 1160, top: 780, z: 30 }}>
+            <Grid
+              sx={{
+                position: "absolute",
+                left: 1160,
+                top: 780,
+                z: 30,
+                transition: "transform 0.1s ease",
+                transform: trigger ? "translateY(-40px)" : "translateY(10)",
+              }}
+            >
               <Threecoins />
             </Grid>
             <img src={Vegalia} alt="MaxulichneyGuySectionPic" />
             <MKTypography
               pt={6}
               color="#000"
-              sx={{ position: "absolute", left: 970, top: 950, z: 30 }}
+              sx={{
+                position: "absolute",
+                left: 970,
+                top: 950,
+                z: 30,
+                transition: "transform 0.1s ease",
+                transform: trigger ? "translateY(-40px)" : "translateY(10)",
+              }}
             >
               {" "}
               Vegalia sells Procreate brushes

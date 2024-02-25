@@ -1,5 +1,6 @@
 // @mui material components
 import Grid from "@mui/material/Grid";
+import { useScrollTrigger } from "@mui/material";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -10,6 +11,12 @@ import Gcoin4 from "../../../../assets/MyImages/GumroadallSVG/gcoin4.svg";
 import Gcoin5 from "../../../../assets/MyImages/GumroadallSVG/gcoin4.svg";
 
 function BuiltByDevelopers() {
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 40, // Adjust threshold as needed
+  });
+
   return (
     <Grid
       container
@@ -57,20 +64,65 @@ function BuiltByDevelopers() {
           >
             The amount of income earned by Gumroad <br></br> digital entrepreneurs last week.
           </MKTypography>
-          <Grid item sx={{ position: "absolute", left: 1160, top: -270 }}>
+          <Grid
+            item
+            sx={{
+              position: "absolute",
+              left: 1160,
+              top: -270,
+              transition: "transform 0.1s ease",
+              transform: trigger ? "translateY(-40px)" : "translateY(10)",
+            }}
+          >
             <Gcoin3 />
           </Grid>
-          <Grid item sx={{ position: "absolute", left: 1420, top: -190 }}>
+          <Grid
+            item
+            sx={{
+              position: "absolute",
+              left: 1550,
+              top: -10,
+              transition: "transform 0.1s ease",
+              transform: trigger ? "translateY(-40px)" : "translateY(10)",
+            }}
+          >
             <Gcoin4 />
           </Grid>
-          <Grid item sx={{ position: "absolute", left: 1250, top: 190 }}>
+          <Grid
+            item
+            sx={{
+              position: "absolute",
+              left: 1250,
+              top: 190,
+              transition: "transform 0.1s ease",
+              transform: trigger ? "translateY(-40px)" : "translateY(10)",
+            }}
+          >
             <Gcoin2 />
           </Grid>
-          <Grid item sx={{ position: "absolute", right: 1310, top: 140 }}>
+          <Grid
+            item
+            sx={{
+              position: "absolute",
+              right: 1310,
+              top: 140,
+              transition: "transform 0.1s ease",
+              transform: trigger ? "translateY(-40px)" : "translateY(10)",
+            }}
+          >
             <Gcoin5 />
           </Grid>
         </Grid>
-        <Grid item sx={{ position: "absolute", right: 1410, top: -150 }}>
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            right: 1410,
+            top: -150,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
           <Gcoin2 />
         </Grid>
       </MKBox>

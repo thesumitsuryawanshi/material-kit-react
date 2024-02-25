@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 // Material Kit 2 React examples
+import { useScrollTrigger } from "@mui/material";
 
 import YellowHand from "../../../assets/MyImages/GumroadallSVG/BlocksSVGS/writing_pen.svg";
 
@@ -32,6 +33,12 @@ const handleStartSellingClick = () => {
 };
 
 function MaxulichneyGuySection() {
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 40, // Adjust threshold as needed
+  });
+
   return (
     <MKBox
       p={6}
@@ -94,13 +101,14 @@ function MaxulichneyGuySection() {
           onClick={handleStartSellingClick} // Add onClick event
           sx={{
             fontFamily: "serif",
-            fontSize: 30,
+            fontSize: 20,
             pl: 3,
             p: 1,
             position: "absolute",
             left: 1450,
             top: 5080,
-            z: 11,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
           }}
         >
           <svg
@@ -118,8 +126,24 @@ function MaxulichneyGuySection() {
           </svg>
           maxulichney
         </MyBtnStartSelling>
-        <Grid item sx={{ position: "absolute", left: 1110, top: 4940, z: 11 }}>
-          <YellowHand />
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1110,
+            top: 4940,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <YellowHand
+            sx={{
+              position: "absolute",
+              transition: "transform 0.1s ease",
+              transform: trigger ? "translateY(-40px)" : "translateY(10)",
+            }}
+          />
         </Grid>
       </Grid>
       <Grid p={3} m={3} alignItems="center" justify="center">

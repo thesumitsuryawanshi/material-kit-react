@@ -36,9 +36,9 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/" element={<Presentation />} />
-        <Route path="/presentation" element={<Crowdfunding />} />
+        <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
-        <Route path="/crowdfunding" element={<Presentation />} />
+        <Route path="/crowdfunding" element={<Crowdfunding />} />
         <Route path="/stripe" element={<Stripe />} />
         <Route path="/success" element={<Stripesuccess />} />
         <Route path="/cancel" element={<Stripefailure />} />

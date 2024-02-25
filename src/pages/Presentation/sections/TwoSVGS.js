@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid"; // Import Grid component
-import ConfusedOnLaptop from "../../../assets/MyImages/GumroadallSVG/cofused on Laptop.svg";
-import UnderTree from "../../../assets/MyImages/GumroadallSVG/seating unde hte tree.svg";
+import ConfusedOnLaptop from "../../../assets/MyImages/GumroadallSVG/MyPNG new/confusedOnLaptop.png";
+import UnderTree2 from "../../../assets/MyImages/GumroadallSVG/MyPNG new/GuyUnderTree.png";
 
 import MKTypography from "components/MKTypography";
 
@@ -43,7 +43,7 @@ function MakeYourOwnRoad() {
             color: "#000",
           }}
         >
-          <ConfusedOnLaptop />
+          <img src={ConfusedOnLaptop}></img>
         </MKTypography>
       </Grid>
 
@@ -72,7 +72,7 @@ function MakeYourOwnRoad() {
             color: "#000",
           }}
         >
-          <UnderTree />
+          <img src={UnderTree2}></img>
         </MKTypography>
       </Grid>
     </Grid>

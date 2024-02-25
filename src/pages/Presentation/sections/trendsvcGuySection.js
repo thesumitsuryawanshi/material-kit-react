@@ -1,17 +1,18 @@
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import { useScrollTrigger } from "@mui/material";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 // Material Kit 2 React examples
 
 import FreeSVG from "../../../assets/MyImages/GumroadallSVG/free.svg";
-import BookSVG from "../../../assets/MyImages/GumroadallSVG/books.svg";
 import { styled } from "@mui/material/styles";
 
 import MKTypography from "components/MKTypography";
 import counterSectionMan from "../../../assets/MyImages/trendsvc.png";
+import BOOKSVG from "../../../assets/MyImages/GumroadallSVG/MyPNG new/vectorpaintBooks.png";
 
 const MyBtnStartSelling = styled("button")({
   color: "black",
@@ -34,6 +35,12 @@ const handleStartSellingClick = () => {
 };
 
 function trendsvcGuySection() {
+  const trigger = useScrollTrigger({
+    target: window,
+    disableHysteresis: true,
+    threshold: 10, // Adjust threshold as needed
+  });
+
   return (
     <MKBox
       py={6}
@@ -88,6 +95,19 @@ function trendsvcGuySection() {
           </MKTypography>
         </Grid>
 
+        <MKBox
+          sx={{
+            position: "absolute",
+            left: 670,
+            top: 350,
+            zIndex: 1230,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
+          <img src={BOOKSVG} alt="Description of your image" />
+        </MKBox>
+
         <MyBtnStartSelling
           onClick={handleStartSellingClick} // Add onClick event
           sx={{
@@ -99,6 +119,9 @@ function trendsvcGuySection() {
             left: 1150,
             top: 480,
             z: 11,
+            transform: trigger ? "translateY(-10px)" : "translateY(0)",
+
+            transition: "transform 0.1s ease",
           }}
         >
           <svg
@@ -116,12 +139,30 @@ function trendsvcGuySection() {
           </svg>
           trendsvc
         </MyBtnStartSelling>
-        <Grid item sx={{ position: "absolute", left: 1150, top: 10, z: 11 }}>
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 1150,
+            top: 10,
+            z: 1221,
+            transition: "transform 0.3s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        >
           <FreeSVG />
         </Grid>
-        <Grid item sx={{ position: "absolute", left: 680, top: 455, z: 11 }}>
-          <BookSVG />
-        </Grid>
+        <Grid
+          item
+          sx={{
+            position: "absolute",
+            left: 680,
+            top: 455,
+            z: 11,
+            transition: "transform 0.1s ease",
+            transform: trigger ? "translateY(-40px)" : "translateY(10)",
+          }}
+        ></Grid>
 
         <Grid p={3} m={4} alignItems="center" justify="center">
           <img src={counterSectionMan} alt="MaxulichneyGuySectionPic" />
