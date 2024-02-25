@@ -11,6 +11,8 @@ const stripe = require("stripe")(
 
 //checkout api
 app.post("/api/create-checkout-session", async (req, res) => {
+  console.log("Post method executed");
+
   const { products } = req.body;
 
   const lineItems = products.map((product) => ({

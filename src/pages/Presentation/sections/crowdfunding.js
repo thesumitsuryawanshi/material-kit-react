@@ -70,18 +70,6 @@ function Crowdfunding() {
       ],
     };
 
-    const customer = {
-      name: "Customer Name",
-      address: {
-        line1: "Address Line 1",
-        line2: "Address Line 2",
-        city: "City",
-        state: "State",
-        postal_code: "Postal Code",
-        country: "Country",
-      },
-    };
-
     const headers = { "Content-Type": "application/json" };
 
     const response = await fetch("http://localhost:7000/api/create-checkout-session", {
