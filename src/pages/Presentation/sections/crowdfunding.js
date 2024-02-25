@@ -48,14 +48,7 @@ function Crowdfunding() {
     setOpen(index === selectedItem ? !open : true);
     setSelectedItem(index);
   };
-
-  //payment integration
   const OpenStripe = async () => {
-    // const card = {
-    //   name: "Crypto Bitcoins Guide - The Beginner's Guide to Cryptocurrency",
-    //   price: 100,
-    //   quantity: 1,
-    // };
     console.log("Here is the Data");
     const stripe = await loadStripe(
       "pk_test_51Omv38SDApL2Y6yKwb3LKSLCVe6zsFYvvL4x6keruJxjr2YcRQKcY6q1YeuvWunDNUOlL2SFxJLUjmhlDXNNJGuw00n73z6p3r"
@@ -66,6 +59,15 @@ function Crowdfunding() {
           name: "Crypto Bitcoins Guide - The Beginner's Guide to Cryptocurrency",
           price: 100,
           quantity: 1,
+          description: "Description of the product",
+          billing_address: {
+            name: "John Doe",
+            line1: "123 Main St",
+            city: "Anytown",
+            postal_code: "12345",
+            state: "CA",
+            country: "US",
+          },
         },
       ],
     };

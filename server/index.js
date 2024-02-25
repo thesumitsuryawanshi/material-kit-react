@@ -10,6 +10,7 @@ const stripe = require("stripe")(
 );
 
 //checkout api
+//checkout api
 app.post("/api/create-checkout-session", async (req, res) => {
   console.log("Post method executed");
 
@@ -17,9 +18,10 @@ app.post("/api/create-checkout-session", async (req, res) => {
 
   const lineItems = products.map((product) => ({
     price_data: {
-      currency: "inr",
+      currency: "INR",
       product_data: {
         name: product.name,
+        description: product.description,
       },
       unit_amount: product.price * 100,
     },
@@ -32,6 +34,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
     mode: "payment",
     success_url: "http://localhost:3000/success",
     cancel_url: "http://localhost:3000/cancel",
+    billing_address_collection: "auto",
+    billing_address_collection: "required", // or 'required' if you always want to collect billing address
   });
 
   res.json({ id: session.id });
