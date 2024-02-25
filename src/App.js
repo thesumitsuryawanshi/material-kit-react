@@ -5,6 +5,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
 import Crowdfunding from "../src/pages/Presentation/sections/crowdfunding";
+import Stripesuccess from "../src/pages/Presentation/sections/stripesuccess";
+import Stripefailure from "../src/pages/Presentation/sections/stripefailure";
 import routes from "routes";
 import Stripe from "stripe";
 
@@ -25,7 +27,6 @@ export default function App() {
       if (route.route) {
         return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
-
       return null;
     });
 
@@ -34,10 +35,13 @@ export default function App() {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
-        <Route path="/presentation" element={<Presentation />} />
+        <Route path="/" element={<Presentation />} />
+        <Route path="/presentation" element={<Crowdfunding />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
-        <Route path="/crowdfunding" element={<Crowdfunding />} />
+        <Route path="/crowdfunding" element={<Presentation />} />
         <Route path="/stripe" element={<Stripe />} />
+        <Route path="/success" element={<Stripesuccess />} />
+        <Route path="/cancel" element={<Stripefailure />} />
       </Routes>
     </ThemeProvider>
   );

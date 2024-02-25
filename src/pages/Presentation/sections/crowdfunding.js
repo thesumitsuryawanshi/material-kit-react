@@ -3,6 +3,7 @@ import MKTypography from "components/MKTypography";
 import DefaultFooter from "../../../examples/Footers/DefaultFooter";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
+// import { Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import { Collapse } from "@mui/material";
 import MKBox from "components/MKBox";
@@ -10,12 +11,11 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton"; // import { Typography, Button, Box } from "@mui/material";
+import { loadStripe } from "@stripe/stripe-js";
 
 import AddIcon from "@mui/icons-material/Add";
 
 import StartSelling from "pages/Presentation/sections/StartSelling";
-// import Container from "@mui/material/Container";
-
 import DefaultNavBar from "examples/Navbars/DefaultNavbar/DefaultNavBar";
 import BlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
@@ -49,6 +49,34 @@ function Crowdfunding() {
     setSelectedItem(index);
   };
 
+  //payment integration
+  const OpenStripe = async () => {
+    const card = {
+      name: "Crypto Bitcoins Guide - The Beginner's Guide to Cryptocurrency",
+      price: 100,
+      quantity: 1,
+    };
+    console.log("Here is the Data");
+    const stripe = await loadStripe(
+      "pk_test_51Omv38SDApL2Y6yKwb3LKSLCVe6zsFYvvL4x6keruJxjr2YcRQKcY6q1YeuvWunDNUOlL2SFxJLUjmhlDXNNJGuw00n73z6p3r"
+    );
+    const body = { products: card };
+    const headers = { "Content-Type": "application/json" };
+
+    const response = await fetch("http://localhost:7000/api/create-checkout-session", {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(body),
+    });
+
+    const session = await response.json();
+
+    const result = stripe.redirectToCheckout({ sessionId: session.id });
+
+    if (result.error) {
+      console.log(result.error);
+    }
+  };
   return (
     <>
       <DefaultNavBar></DefaultNavBar>
@@ -120,19 +148,61 @@ function Crowdfunding() {
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={vitrivianMan}
-                  title="Life Trining program - Project by AJAC "
-                  description="The AJAC Life Training log is a daily accountability journal that you can use, based upon building and enforcing the following daily habits."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/-",
-                  }}
-                />
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={vitrivianMan}
+                    title="Life Trining program - Project by AJAC "
+                    description="The AJAC Life Training log is a daily accountability journal that you can use, based upon building and enforcing the following daily habits."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/-",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
+
+            <MKBox
+              pt={6}
+              pb={3}
+              px={3}
+              sx={{
+                transition: "transform 0.4s",
+                "& > div, & > div > div": {
+                  transition: "inherit",
+                },
+                "&:hover": {
+                  "& > div": {
+                    transform: "rotateY(30deg)",
+                    "& > div:nth-child(2)": {
+                      transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                    },
+                  },
+                },
+              }}
+            >
+              {" "}
+              <Grid>
+                <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
+                  <div onClick={OpenStripe}>
+                    <BlogCard
+                      image={mshair1}
+                      title="Vol 1 Clip Studio Paint, Brushes By. Vegalia. "
+                      description="Vol 1 Clip Studio Paint, Photoshop & Fresco Curl, Coil, and Wave Brushes Brushes By. Vegalia. Things include  Paint, Photoshop Deluxe items."
+                      action={{
+                        type: "internal",
+                        route: "/sections/page-sections/general-cards",
+                        color: "info",
+                        label: "Starting Investment : $100/-",
+                      }}
+                    />
+                  </div>
+                </Grid>
+              </Grid>
+            </MKBox>
+
             <MKBox
               pt={6}
               pb={3}
@@ -153,19 +223,22 @@ function Crowdfunding() {
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={mshair1}
-                  title="Vol 1 Clip Studio Paint, Brushes By. Vegalia. "
-                  description="Vol 1 Clip Studio Paint, Photoshop & Fresco Curl, Coil, and Wave Brushes Brushes By. Vegalia. Things include  Paint, Photoshop Deluxe items."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/-",
-                  }}
-                />
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={mshair2}
+                    title="Vol 2   Clip Studio Paint, Brushes By. Vegalia."
+                    description="Vol 2 Clip Studio Paint, Photoshop & Fresco Curl, Coil, and Wave Brushes Brushes By. Vegalia. Things include  Paint, Photoshop Deluxe items."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/-",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
+
             <MKBox
               pt={6}
               pb={3}
@@ -186,52 +259,21 @@ function Crowdfunding() {
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={mshair2}
-                  title="Vol 2   Clip Studio Paint, Brushes By. Vegalia."
-                  description="Vol 2 Clip Studio Paint, Photoshop & Fresco Curl, Coil, and Wave Brushes Brushes By. Vegalia. Things include  Paint, Photoshop Deluxe items."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/-",
-                  }}
-                />
-              </Grid>
-            </MKBox>
-            <MKBox
-              pt={6}
-              pb={3}
-              px={3}
-              sx={{
-                transition: "transform 0.4s",
-                "& > div, & > div > div": {
-                  transition: "inherit",
-                },
-                "&:hover": {
-                  "& > div": {
-                    transform: "rotateY(30deg)",
-                    "& > div:nth-child(2)": {
-                      transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                    },
-                  },
-                },
-              }}
-            >
-              <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={ancientHero1}
-                  title="Ancient Athletics - Alexander J.A Cortes"
-                  description="Train Like the Ancients #1: Sunlight and its Role in Health 
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={ancientHero1}
+                    title="Ancient Athletics - Alexander J.A Cortes"
+                    description="Train Like the Ancients #1: Sunlight and its Role in Health 
 Heal Like the Ancients #2: METH and Light vs RICE 
  Ancients Training #4 Spiritual Hygiene "
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
           </Box>
@@ -257,18 +299,20 @@ Heal Like the Ancients #2: METH and Light vs RICE 
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={monkeynft2}
-                  title="Hoodie Monkey el Patron NFT"
-                  description="Hoodie Monkey drinking wine. 8k/3d image for NFT ready!The patron 
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={monkeynft2}
+                    title="Hoodie Monkey el Patron NFT"
+                    description="Hoodie Monkey drinking wine. 8k/3d image for NFT ready!The patron 
                   like do drink & smoke on some woods during his breaks! Because "
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
 
@@ -292,17 +336,19 @@ Heal Like the Ancients #2: METH and Light vs RICE 
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={bitcoin1}
-                  title="ChatGPT Crypto Trading Mastery"
-                  description="Master crypto will help with using ChatGPT as a FREE trading assistant. The basics of  Crypto trading strategies, how to create NFT's using AI."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={bitcoin1}
+                    title="ChatGPT Crypto Trading Mastery"
+                    description="Master crypto will help with using ChatGPT as a FREE trading assistant. The basics of  Crypto trading strategies, how to create NFT's using AI."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
 
@@ -326,21 +372,23 @@ Heal Like the Ancients #2: METH and Light vs RICE 
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={MonkeyNFT}
-                  title="How to NFT: Ebook by @TheMon3yMom"
-                  description="his course covers the basics of NFTs:
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={MonkeyNFT}
+                    title="How to NFT: Ebook by @TheMon3yMom"
+                    description="his course covers the basics of NFTs:
 How to create, buy and sell NFTs
 NFT culture communit Minting NFTs
 How to create a wallet
 "
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
 
@@ -364,18 +412,20 @@ How to create a wallet
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={maxpack3}
-                  title="The Painter's MaxPack - Brushes for Procreate"
-                  description="The Painter's MaxPack is a set of brushes compatible with Procreate 4+  
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={maxpack3}
+                    title="The Painter's MaxPack - Brushes for Procreate"
+                    description="The Painter's MaxPack is a set of brushes compatible with Procreate 4+  
 Enjoy 12 natural media brushes and 5 bonus smudge brushes."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
           </Box>
@@ -401,10 +451,11 @@ Enjoy 12 natural media brushes and 5 bonus smudge brushes."
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={pixelcoin1}
-                  title="NFTs for Artists | The ultimate guide to sell your ART as an NFT"
-                  description=" This course covers the basics of NFTs:
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={pixelcoin1}
+                    title="NFTs for Artists | The ultimate guide to sell your ART as an NFT"
+                    description=" This course covers the basics of NFTs:
 
 How to create, buy and sell NFTs
 
@@ -413,13 +464,14 @@ NFT culture and community
 NFT History
 
 How to mint NFTs"
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
 
@@ -443,18 +495,20 @@ How to mint NFTs"
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={eagleimg}
-                  title="Eagle Eye Thinkers"
-                  description="Third Eye Is a comedic slice-of-life series about friendship, growth, and observing the genuine and unique parts of our favorite 
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={eagleimg}
+                    title="Eagle Eye Thinkers"
+                    description="Third Eye Is a comedic slice-of-life series about friendship, growth, and observing the genuine and unique parts of our favorite 
                   things.also demons. "
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
 
@@ -478,17 +532,19 @@ How to mint NFTs"
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={brainimg}
-                  title="Become Unstoppable- A System to Unleash your Inner Beast"
-                  description="BYou will rewire your Mind and Finally build those killer Habits to optimize your Existence on Every Level -- physically,   emotionally, and financially."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={brainimg}
+                    title="Become Unstoppable- A System to Unleash your Inner Beast"
+                    description="BYou will rewire your Mind and Finally build those killer Habits to optimize your Existence on Every Level -- physically,   emotionally, and financially."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment : $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
 
@@ -512,18 +568,19 @@ How to mint NFTs"
               }}
             >
               <Grid container item xs={12} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
-                <BlogCard
-                  image={bitcoin2}
-                  title="Crypto Bitcoins Guide - The Beginner's Guide to Cryptocurrency
-"
-                  description="Crypto Bitcoins Guide : Many individuals believe that bitcoins represent a replacement era of digital currency and often get confused with them."
-                  action={{
-                    type: "internal",
-                    route: "/sections/page-sections/general-cards",
-                    color: "info",
-                    label: "Starting Investment : $100/- ",
-                  }}
-                />
+                <div onClick={OpenStripe}>
+                  <BlogCard
+                    image={bitcoin2}
+                    title="Crypto Bitcoins Guide - The Beginner's Guide to Cryptocurrency"
+                    description="Crypto Bitcoins Guide: Many individuals believe that bitcoins represent a new era of digital currency and often get confused with them."
+                    action={{
+                      type: "internal",
+                      route: "/sections/page-sections/general-cards",
+                      color: "info",
+                      label: "Starting Investment: $100/- ",
+                    }}
+                  />
+                </div>
               </Grid>
             </MKBox>
           </Box>

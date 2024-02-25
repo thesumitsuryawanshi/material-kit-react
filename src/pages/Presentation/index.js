@@ -31,13 +31,6 @@ import TwoText from "pages/Presentation/sections/TwoText";
 import TopAnimationGuy from "pages/Presentation/sections/TopAnimationGuy";
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
-// Routes
-
-// const Pages = ["crowdfunding"];
-// import GUMROAD from "../../assets/MyImages/GumroadallSVG/gumroad_text_two.svg";
-
-// Images
-
 //myip's
 import * as React from "react";
 
